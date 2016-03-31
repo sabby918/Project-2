@@ -37,6 +37,11 @@ void Elevator::checkDestinations() {
 }
 
 void Elevator::move() {
+
+	changeDirection();
+
+	
+	
 	if (destinations.empty()) {
 		moving = false;
 		up = false;
@@ -54,10 +59,11 @@ void Elevator::move() {
 	}
 }
 
+
 void Elevator::changeDirection() {
 	list<int>::iterator itr;
 	if (up) {
-		bool greater=false;
+		bool greater = false;
 		for (itr = destinations.begin(); itr != destinations.end(); itr++) {
 			if (current > *itr) {
 				greater = true;
@@ -85,6 +91,5 @@ void Elevator::changeDirection() {
 			}
 		}
 		return;
-	}
 	}
 }

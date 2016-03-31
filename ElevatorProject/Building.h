@@ -7,18 +7,18 @@ using namespace std;
 
 class Elevator {
 private:
-	int ID, current, direction;
+	int ID, current, direction, floornumber;
 	bool up;
 	bool moving;
 public:
 	list<int> destinations;
 	void addDestination(int floor);
-	void moveUp() { ++current; checkDestinations(); };
-	void moveDown() { --current; checkDestinations(); };
+	void moveUp() {if (current < floornumber) {++current; checkDestinations(); } };
+	void moveDown() {if (current > 0) {--current; checkDestinations(); } };
 	void checkDestinations();
 	void changeDirection();
 	void move();
-	void setID(int id) { ID = id; };
+	void setID(int id, int floor) { ID = id, floornumber = floor; };
 	int getLevel() { return current; }
 
 };
