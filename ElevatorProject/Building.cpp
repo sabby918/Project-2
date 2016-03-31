@@ -6,16 +6,12 @@ void building::setElevator(int number) {
 	for (int i = 0; i < number; i++) {
 		Elevator elevator;
 		elevator.setID(i);
-		elevator.connect(frame);
 		elevators.push_back(elevator);
 	}
 }
 
 void building::setFloors(int floor) {
 	floorNumbers = floor;
-	for (int i = 0; i < floor; i++) {
-		frame.push_front(i);
-	}
 }
 
 void building::moveCalls() {
@@ -37,9 +33,13 @@ void building::moveElevators() {
 	list<call>::iterator itr;
 	for (int i = 0; i < elevators.size(); i++) {
 		for (itr = floorCall.begin(); itr != floorCall.end(); itr++) {
-			if (elevators[i].getLevel() == itr->floor) {
+
+			if (elevators[i].getLevel() == itr->floor && !itr->pickedUP ) {
 				elevators[i].addDestination(itr->goal);
+				itr->pickedUP = true;
 				floorCall.erase(itr);
+				if (floorCall.empty())
+					return;
 				itr = floorCall.begin();
 			}
 		}
@@ -50,32 +50,34 @@ void building::moveElevators() {
 }
 void building::simulate() {
 
-	int count=0;
+	int count = 0;
 	srand(time(NULL));
 
-	int index = 0; 
+	int index = 0;
 	while (index < 10) {
 
 		int possiblePeople = rand() % 50;
 
 		for (int z = 0; z < possiblePeople; z++) {
 
-			bool TrueFalse = ((rand() % 100) < 25);
+			bool TrueFalse = ((rand() % 100) < 10);
 			if (TrueFalse) {
 				generate();
 			}
 		}
-		while (!floorCall.empty()) {
-			moveCalls();
+
+		moveCalls();
+
+		while (!floorCall.empty() || !elevators[0].destinations.empty()) {
 			moveElevators();
-			for (int i = 0; i < elevators.size(); i++) {
-				elevators[i].move();
-			}
 			count++;
+			cout << count << endl;
 		}
 		index++;
+		
 	}
-	cout << count;
+	
+	
 }
 
 void building::generate() {
@@ -89,6 +91,7 @@ void building::generate() {
 	call newCall;
 	newCall.floor = current_floor;
 	newCall.goal = desired_floor;
+	newCall.pickedUP = false;
 	if (current_floor < desired_floor) {
 		newCall.direction = 1;
 		floorCall.push_back(newCall);

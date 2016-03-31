@@ -26,9 +26,12 @@ void Elevator::addDestination(int floor) {
 
 void Elevator::checkDestinations() {
 	list<int>::iterator itr;
+	if (destinations.empty())
+		return;
 	for (itr = destinations.begin(); itr != destinations.end(); itr++) {
 		if (*itr == current) {
 			destinations.remove(*itr);
+			return;
 		}
 	}
 }
@@ -38,11 +41,11 @@ void Elevator::move() {
 		moving = false;
 		up = false;
 	}
-	if (!moving && up) {
+	if (moving && up) {
 		moveUp();
 		return;
 	}
-	if (!moving && !up) {
+	if (moving && !up) {
 		moveDown();
 		return;
 	}
