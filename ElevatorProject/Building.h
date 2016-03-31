@@ -16,6 +16,7 @@ public:
 	void moveUp() { ++current; checkDestinations(); };
 	void moveDown() { --current; checkDestinations(); };
 	void checkDestinations();
+	void changeDirection();
 	void move();
 	void setID(int id) { ID = id; };
 	int getLevel() { return current; }

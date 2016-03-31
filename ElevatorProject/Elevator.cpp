@@ -53,3 +53,38 @@ void Elevator::move() {
 		return;
 	}
 }
+
+void Elevator::changeDirection() {
+	list<int>::iterator itr;
+	if (up) {
+		bool greater=false;
+		for (itr = destinations.begin(); itr != destinations.end(); itr++) {
+			if (current > *itr) {
+				greater = true;
+				up = false;
+			}
+			else {
+				greater = false;
+				up = true;
+				return;
+			}
+		}
+		return;
+	}
+	else {
+		bool greater = true;
+		for (itr = destinations.begin(); itr != destinations.end(); itr++) {
+			if (current < *itr) {
+				greater = false;
+				up = true;
+			}
+			else {
+				greater = true;
+				up = false;
+				return;
+			}
+		}
+		return;
+	}
+	}
+}
