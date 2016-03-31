@@ -37,6 +37,7 @@ void Elevator::checkDestinations() {
 }
 
 void Elevator::move() {
+	changeDirection();
 	if (destinations.empty()) {
 		moving = false;
 		up = false;
