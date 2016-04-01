@@ -10,9 +10,13 @@ private:
 	int ID, current, floornumber;
 	int direction = -1;
 	bool up;
+	bool exits = false;
 	bool moving;
 public:
 	list<int> destinations;
+	void setExiting(bool yes_no) { exits = yes_no; }
+	bool getExiting() { return exits; }
+	void restart(int number) { current = number; }
 	void addDestination(int floor);
 	void moveUp() {if (current < floornumber) {++current; checkDestinations(); } };
 	void moveDown() {if (current > 0) {--current; checkDestinations(); } };
