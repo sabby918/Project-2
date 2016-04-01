@@ -8,9 +8,13 @@ void Elevator::addDestination(int floor) {
 		destinations.push_back(floor);
 		if ((current - floor) > 0) {
 			up = false;
+			direction = 0;
 		}
-		else
+		else {
 			up = true;
+			direction = 1;
+		}
+
 
 		return;
 	}
@@ -30,6 +34,7 @@ void Elevator::checkDestinations() {
 		return;
 	for (itr = destinations.begin(); itr != destinations.end(); itr++) {
 		if (*itr == current) {
+			
 			destinations.remove(*itr);
 			return;
 		}
@@ -37,6 +42,11 @@ void Elevator::checkDestinations() {
 }
 
 void Elevator::move() {
+
+	changeDirection();
+
+	
+	
 	if (destinations.empty()) {
 		moving = false;
 		up = false;
@@ -54,10 +64,11 @@ void Elevator::move() {
 	}
 }
 
+
 void Elevator::changeDirection() {
 	list<int>::iterator itr;
 	if (up) {
-		bool greater=false;
+		bool greater = false;
 		for (itr = destinations.begin(); itr != destinations.end(); itr++) {
 			if (current > *itr) {
 				greater = true;
@@ -85,6 +96,5 @@ void Elevator::changeDirection() {
 			}
 		}
 		return;
-	}
 	}
 }
