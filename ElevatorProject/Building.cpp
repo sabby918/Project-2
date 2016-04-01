@@ -2,10 +2,17 @@
 #include <ctime>
 #include <iostream>
 
+///////////
+///////////  if two destinations on the same f
+///////////
+////////////
+////////////
+//////////////
+
 void building::setElevator(int number) {
 	for (int i = 0; i < number; i++) {
 		Elevator elevator;
-		elevator.setID(i);
+		elevator.setID(i,floorNumbers);
 		elevators.push_back(elevator);
 	}
 }
@@ -13,49 +20,90 @@ void building::setElevator(int number) {
 void building::setFloors(int floor) {
 	floorNumbers = floor;
 }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void building::moveCalls() {
+
+
+
+
+void building::dropOff(list<call> request) {
 	list<call>::iterator itr;
 
-	for (itr = floorCall.begin(); itr != floorCall.end(); itr++) {
-		int closest = 0; int diffrence = 100;
-		for (int i = 0; i < elevators.size(); i++) {
-			if (diffrence >(elevators[i].getLevel() - itr->floor)) {
-				closest = i;
-				diffrence = elevators[i].getLevel() - itr->floor;
-			}
+	vector<call> people;
+
+	for (itr = request.begin(); itr != request.end(); itr++) {
+		if (itr->arrived) {
+			people.push_back(*itr);
 		}
-		elevators[closest].addDestination(itr->floor);
 	}
+	for (int i = 0; i < people.size(); i++) {
+		cout << "Request went from floor " << people[i].floor << " to floor " << people[i].goal << endl;
+	}
+
 }
 
-void building::moveElevators() {
-	list<call>::iterator itr;
-	for (int i = 0; i < elevators.size(); i++) {
-		for (itr = floorCall.begin(); itr != floorCall.end(); itr++) {
+void building::moveCalls() {
+	if (floorCall.size() == 0)
+		return;
 
-			if (elevators[i].getLevel() == itr->floor && !itr->pickedUP ) {
-				elevators[i].addDestination(itr->goal);
-				itr->pickedUP = true;
-				floorCall.erase(itr);
-				if (floorCall.empty())
-					return;
-				itr = floorCall.begin();
+	if (location == floorCall.end()) {
+		return;
+	}
+	list<int>::iterator floor;
+	
+	if (elevators[0].destinations.empty()) {
+		elevators[0].addDestination(location->floor);
+		location++;
+	}
+	else {
+		for (floor = elevators[0].destinations.begin(); floor != elevators[0].destinations.end(); floor++) {
+			if (*floor == location->floor) {
+				cout << "we are already going there" << endl;
+				location++;
+				return;
 			}
+		}
+		elevators[0].addDestination(location->floor);
+		location++;
+	}
+}
+void building::setLocation(list<call>::iterator here) {
+	location = floorCall.begin();
+}
+int building::moveElevators() {
+	int done = getComplete();
+	list<call>::iterator itr;
+	for (itr = floorCall.begin(); itr != floorCall.end(); itr++) {
+
+		if (elevators[0].getLevel() == itr->floor && !itr->pickedUP) {
+			elevators[0].addDestination(itr->goal);
+			itr->pickedUP = true;
+		}
+		else if (elevators[0].getLevel() == itr->goal && itr->pickedUP) {
+			itr->arrived = true;
+			/*
+			floorCall.erase(itr);
+			if (floorCall.empty())
+				return;
+			itr = floorCall.begin();*/
+			++done;
 		}
 	}
 	for (int z = 0; z < elevators.size(); z++) {
 		elevators[z].move();
 	}
+	return done;
 }
 void building::simulate() {
 
+	int requests = 0;
+	int complete = 0;
 	int count = 0;
 	srand(time(NULL));
 
 	int index = 0;
-	while (index < 10) {
-
+	while (index < 1) {
+		/*  
 		int possiblePeople = rand() % 50;
 
 		for (int z = 0; z < possiblePeople; z++) {
@@ -63,17 +111,23 @@ void building::simulate() {
 			bool TrueFalse = ((rand() % 100) < 10);
 			if (TrueFalse) {
 				generate();
+				requests++;
 			}
 		}
+		*/
 
-		moveCalls();
+		generate();
+		requests++;
 
-		while (!floorCall.empty() || !elevators[0].destinations.empty()) {
-			moveElevators();
-			count++;
-			cout << count << endl;
+		setLocation(location);
+
+		while ( (complete < requests) ||!elevators[0].destinations.empty()) {
+			moveCalls();
+			complete = moveElevators();
+
 		}
-		index++;
+		cout << "Round: " << index++ << " There were " << requests << " requests" << endl;
+		dropOff(floorCall);
 		
 	}
 	
@@ -92,6 +146,7 @@ void building::generate() {
 	newCall.floor = current_floor;
 	newCall.goal = desired_floor;
 	newCall.pickedUP = false;
+	newCall.arrived = false;
 	if (current_floor < desired_floor) {
 		newCall.direction = 1;
 		floorCall.push_back(newCall);
