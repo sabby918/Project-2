@@ -94,15 +94,20 @@ int building::moveElevators() {
 	}
 	return done;
 }
+
 void building::simulate() {
 
-	int requests = 0;
-	int complete = 0;
+	
 	int count = 0;
 	srand(time(NULL));
-
+	
 	int index = 0;
-	while (index < 1) {
+	while (index < 10) {
+		int requests = 0;
+		int complete = 0;
+		if (!floorCall.empty()) {
+			floorCall.clear();
+		}
 		/*  
 		int possiblePeople = rand() % 50;
 
