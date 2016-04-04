@@ -106,6 +106,14 @@ int building::moveElevators() {
 	}
 
 	elevators[0].move();
+
+	/////////////////////////////////////////////////////
+	list<call>::iterator Oitr;
+	for (Oitr = floorCall.begin(); Oitr != floorCall.end(); Oitr++) {
+		if(Oitr->arrived == false)
+			Oitr->waitingTime++;
+	}
+	///////////////////////////////////////////////
 	return done;
 }
 void building::simulate() {
@@ -140,12 +148,14 @@ void building::simulate() {
 		newCall.pickedUP = false;
 		newCall.arrived = false;
 		newCall.direction = 1;
+		newCall.waitingTime = 0;
 		call newCall1;
 		newCall1.floor = 0;
 		newCall1.goal = 2;
 		newCall1.pickedUP = false;
 		newCall1.arrived = false;
 		newCall1.direction = 1;
+		newCall1.waitingTime = 0;
 		floorCall.push_back(newCall);
 		floorCall.push_back(newCall1);
 		//generate();
@@ -167,7 +177,17 @@ void building::simulate() {
 		}
 		cout << "Round: " << index++ << " There were " << requests << " requests" << endl;
 		dropOff(floorCall);
-		cout << endl;
+		cout <<  endl;
+
+		list<call>::iterator itr;
+		int i = 1;
+		for (itr = floorCall.begin(); itr != floorCall.end(); itr++){
+			cout << "The waiting time for floorcall [" << i << "] was " << itr->waitingTime << endl;
+			i++;
+		}
+
+		cout << endl << endl;
+		
 		
 	}
 	
@@ -185,6 +205,7 @@ void building::generate() {
 	call newCall;
 	newCall.floor = current_floor;
 	newCall.goal = desired_floor;
+	newCall.waitingTime = 0;
 	newCall.pickedUP = false;
 	newCall.arrived = false;
 	if (current_floor < desired_floor) {
