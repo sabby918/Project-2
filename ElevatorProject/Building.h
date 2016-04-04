@@ -31,7 +31,7 @@ public:
 class building {
 	friend class elevator;
 private:
-	struct call { int floor, goal, direction; bool pickedUP, arrived; };
+	struct call { int floor, goal, direction, waitingTime; bool pickedUP, arrived; };
 	list<call> floorCall;
 	vector<Elevator> elevators;
 	int elevatorNumber;
