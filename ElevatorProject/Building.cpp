@@ -5,7 +5,7 @@
 void building::setElevator(int number) {
 	for (int i = 0; i < number; i++) {
 		Elevator elevator;
-		elevator.setID(i, floorNumbers);
+		elevator.setID(i);
 		elevators.push_back(elevator);
 	}
 }
@@ -15,10 +15,18 @@ void building::setFloors(int floor) {
 }
 
 void building::moveCalls() {
-	if (!elevators[0].destinations.empty()) {
-		elevators[0].addDestination(floorCall.front().floor);
+	list<call>::iterator itr;
+
+	for (itr = floorCall.begin(); itr != floorCall.end(); itr++) {
+		int closest = 0; int diffrence = 100;
+		for (int i = 0; i < elevators.size(); i++) {
+			if (diffrence >(elevators[i].getLevel() - itr->floor)) {
+				closest = i;
+				diffrence = elevators[i].getLevel() - itr->floor;
+			}
+		}
+		elevators[closest].addDestination(itr->floor);
 	}
-	return;
 }
 
 void building::moveElevators() {
@@ -66,7 +74,6 @@ void building::simulate() {
 			cout << count << endl;
 		}
 		index++;
-		cout << index << "index" << endl;
 		
 	}
 	
