@@ -86,5 +86,4 @@ void Elevator::changeDirection() {
 		}
 		return;
 	}
-	}
 }

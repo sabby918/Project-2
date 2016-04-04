@@ -12,6 +12,4 @@ void main(){
 	one.setElevator(1);
 	one.generate();
 	one.simulate();
-
-	system("pause");
 }
