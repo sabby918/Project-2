@@ -8,12 +8,12 @@ using namespace std;
 class Elevator {
 private:
 	int ID, current, floornumber;
-	int direction = -1;
 	bool up;
 	bool exits = false;
 	bool moving;
 public:
 	list<int> destinations;
+	int direction = -1;
 	void setExiting(bool yes_no) { exits = yes_no; }
 	bool getExiting() { return exits; }
 	void restart(int number) { current = number; }
