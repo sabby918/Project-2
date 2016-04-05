@@ -168,12 +168,14 @@ void building::simulate() {
 		while ( (complete < requests) ||!elevators[0].destinations.empty()) {
 			moveCalls();
 			complete += moveElevators();
-			if  (elevators[0].destinations.size() == 0){}
-
-			// (if the first floor was the first destination & there are still destinations) or if people were let off
-			else if ((elevators[0].destinations.size() > 1 && elevators[0].destinations.front() < elevators[0].getLevel()) || elevators[0].getExiting())
+			if (elevators[0].destinations.size() == 1 && elevators[0].destinations.front() == elevators[0].getLevel()) {
 				elevators[0].destinations.pop_front();
-
+			}
+			// (if the first floor was the first destination & there are still destinations) or if people were let off
+			else if (elevators[0].destinations.size() > 1 && ((elevators[0].destinations.front() < elevators[0].getLevel() && elevators[0].direction == 1)||( elevators[0].destinations.front() > elevators[0].getLevel() && elevators[0].direction == 0)) || elevators[0].getExiting())
+				if (!elevators[0].destinations.empty()) {
+					elevators[0].destinations.pop_front();
+				}
 		}
 		cout << "Round: " << index++ << " There were " << requests << " requests" << endl;
 		dropOff(floorCall);
