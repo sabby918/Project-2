@@ -2,6 +2,8 @@
 #include <ctime>
 #include <iostream>
 
+/////////////////// MOST UPDATED
+
 ///////////
 ///////////  if two destinations on the same f
 ///////////
@@ -62,15 +64,17 @@ void building::moveCalls() {
 			for (floor = ++floorCall.begin(); floor != floorCall.end(); floor++) {
 				// if there are multiple requests from the same floor -- do nothing
 				for (inside = elevators[0].destinations.begin(); inside != elevators[0].destinations.end(); inside++) {
-					if (floor->floor == *inside) {
-						//return???
-					}
 					// if the goal is aready in the destination log
-					else if (floor->goal == location->floor) {
+					if (floor->goal == *inside && floor->direction == elevators[0].direction) {
 						cout << "going there already" << endl;
-						location++;
-						return;
+						if (location != floorCall.end()) {
+							location++;
+							return;
+						}
 					}
+				}
+				if (floor != floorCall.end()) {
+					floor++;
 				}
 			}
 		}
@@ -80,17 +84,18 @@ void building::setLocation(list<call>::iterator here) {
 	location = floorCall.begin();
 }
 int building::moveElevators() {
-	bool leaving = false;
-	elevators[0].setExiting(leaving);
+	bool leaving;
 	int done = getComplete();
 	list<call>::iterator itr;
 	for (itr = floorCall.begin(); itr != floorCall.end(); itr++) {
+		leaving = false;
+		elevators[0].setExiting(leaving);
 
 		if (elevators[0].getLevel() == itr->floor && !itr->pickedUP) {
 			elevators[0].addDestination(itr->goal);
 			itr->pickedUP = true;
 		}
-		else if (elevators[0].getLevel() == itr->goal && itr->pickedUP) {
+		else if (elevators[0].getLevel() == itr->goal && itr->pickedUP && !itr->arrived) {
 			itr->arrived = true;
 			/*
 			floorCall.erase(itr);
@@ -161,6 +166,15 @@ void building::simulate() {
 		//generate();
 		//generate();
 		requests++;
+		requests++;
+		call newCall2;
+		newCall2.floor = 6;
+		newCall2.goal = 0;
+		newCall2.pickedUP = false;
+		newCall2.arrived = false;
+		newCall2.direction = 0;
+		newCall2.waitingTime = 0;
+		floorCall.push_back(newCall2);
 		requests++;
 
 		setLocation(location);
