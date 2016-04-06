@@ -18,6 +18,7 @@ void timeCoversion(int time) {
 	cout << minutes << " Minutes " 
 		<< seconds << " Seconds";
 }
+
 void building::setElevator(int number) {
 	for (int i = 0; i < number; i++) {
 		Elevator elevator;
@@ -105,45 +106,6 @@ int building::moveElevators() {
 	elevators[0].move();
 	return num;
 }
-/*int building::moveElevators() {
-	bool leaving;
-	int done = getComplete();
-	list<call>::iterator itr;
-	for (itr = floorCall.begin(); itr != floorCall.end(); itr++) {
-		leaving = false;
-		elevators[0].setExiting(leaving);
-
-		if (elevators[0].getLevel() == itr->floor && !itr->pickedUP) {
-			elevators[0].addDestination(itr->goal);
-			itr->pickedUP = true;
-		}
-		else if (elevators[0].getLevel() == itr->goal && itr->pickedUP && !itr->arrived) {
-			itr->arrived = true;
-			/*
-			floorCall.erase(itr);
-			if (floorCall.empty())
-				return;
-			itr = floorCall.begin();
-			++done;
-			leaving = true;
-		}
-	}
-	if (leaving) {
-		elevators[0].setExiting(true);
-	}
-
-	elevators[0].move();
-
-	/////////////////////////////////////////////////////
-	list<call>::iterator Oitr;
-	for (Oitr = floorCall.begin(); Oitr != floorCall.end(); Oitr++) {
-		if(Oitr->arrived == false)
-			Oitr->waitingTime++;
-	}
-	///////////////////////////////////////////////
-	return done;
-}
-*/
 
 void building::simulate() {
 	int index = 0;
