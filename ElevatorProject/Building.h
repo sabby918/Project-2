@@ -31,19 +31,19 @@ public:
 class building {
 	friend class elevator;
 private:
-	struct call { int floor, goal, direction, waitingTime; bool pickedUP, arrived; };
-	list<call> floorCall;
+	struct call { int floor, goal, direction, waitingTime; bool pickedUP, arrived; };//structure that contains the calls
+	list<call> floorCall;//list of all the calls that are generated for that round
 	vector<Elevator> elevators;
 	int elevatorNumber;
-	int floorNumbers;
+	int floorNumbers;//the total number of floors
 	int completeCalls = 0;
 public:
 	list<call>::iterator location = floorCall.begin();
 	void setLocation(list<call>::iterator here);
 	int getComplete() { return completeCalls; }
-	void generate();
-	void setElevator(int number = 1);
-	void setFloors(int floors = 10);
+	void generate();//creates a call with random values
+	void setElevator(int number = 1);//set the elevators
+	void setFloors(int floors = 10);//sets the number of floors
 	void dropOff(list<call> requests);
 	void moveCalls();
 	int moveElevators();
