@@ -42,6 +42,7 @@ private:
 	//total number of floors in the building
 	int floorNumbers;
 	int completeCalls = 0;
+	int roundTime=0;
 public:
 	int traffic = 50;
 	//where are we in the floorCall list

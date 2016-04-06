@@ -6,12 +6,12 @@
 
 
 
-void timeCoversion(int time, ostream& file) {
+int timeCoversion(int time, ostream& file) {
 
-	time *= 30;
+	time *= 10;
 	int minutes = time / 60;
 	int seconds = time % 60;
-	if(minutes == 1){
+	if (minutes == 1) {
 		file << minutes << " Min "
 			<< seconds << " Secs";
 	}
@@ -19,7 +19,10 @@ void timeCoversion(int time, ostream& file) {
 		file << minutes << " Mins "
 			<< seconds << " Secs";
 	}
+
+	return time / 10;
 }
+
 
 void building::setElevator(int number) {
 
@@ -55,6 +58,7 @@ void building::calcWaitingTime() {
 		if (itr->arrived == false)
 			itr->waitingTime++;
 	}
+	roundTime += 1;
 }
 
 void building::setFloors(int floor) {
@@ -154,14 +158,16 @@ void building::simulate() {
 	ofstream fout;
 	fout.open("example.txt");
 	while (index < 10) {
+		roundTime = 0;
 		theElevator.restart(0);
 		int requests = 0;
 		int complete = 0;
 		if (!floorCall.empty()) {
 			floorCall.clear();
 		}
-		 
+
 		int possiblePeople = rand() % 50;
+		int percentage = 50;
 		requests = createCalls(requests, traffic, 10);
 		setLocation(location);
 		while (requests > complete) {
@@ -169,33 +175,52 @@ void building::simulate() {
 			while (!theElevator.destinations.empty()) {
 				complete += moveElevators();
 			}
+			if (roundTime < 360) {
+				requests = createCalls(requests, traffic, 5);
+			}
+
 		}
 
 		ofstream myfile;
-		myfile.open("example.txt" , ofstream::app);
+		myfile.open("elevator.txt", ofstream::app);
 
-		myfile << "\t Round: " << ++index << " There were " << requests << " requests" << endl << endl;
-		myfile << "Request		Start		Goal		Time" << endl;
-		for (int i = 0; i < 30; i++) {
+		myfile << "\t     Round: " << ++index << " There were " << requests << " requests" << endl << endl;
+		myfile << "Request		Start		Goal		Time		Approx." << endl;
+		for (int i = 0; i < 50; i++) {
 			myfile << "__";
 		}
-		myfile << endl;
-
-		myfile << endl;
+		myfile << endl << endl;
 
 		list<call>::iterator itr;
 		int i = 1;
+		int averageTime = 0;
 		for (itr = floorCall.begin(); itr != floorCall.end(); itr++) {
-			myfile << i <<" |		"<< itr->floor<< " |		" << itr->goal << " |		";  
-			timeCoversion(itr->waitingTime, myfile);
-				myfile << endl;
+			myfile << i << "\t|\t" << itr->floor << "\t|\t" << itr->goal << "\t|\t" << itr->waitingTime << "\t|\t";
+			averageTime += timeCoversion(itr->waitingTime, myfile);
+			myfile << endl;
 			i++;
 		}
-
+		averageTime = averageTime / requests;
+		myfile << endl;
+		myfile << "Average Time: "; timeCoversion(averageTime, myfile);
+		myfile << endl;
+		//timeCoversion(roundTime, myfile);
+		cout << roundTime << endl;
+		int temp = roundTime;
+		temp = temp * 10;
+		int minutes = temp / 60;
+		int seconds = temp % 30;
+		myfile << "RoundTime: " << minutes <<" Mins " << seconds << " Secs";
 		myfile << endl << endl;
 
+		for (int i = 0; i < 30; i++) {
+			myfile << "+-";
+		}
+		myfile << endl;
+		myfile.close();
 	}
 
+	cout << "Simulation Complete.  Go to elevator.txt for results" << endl << endl;
 }
 
 void building::generate() {

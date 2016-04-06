@@ -1,16 +1,9 @@
-﻿Build started 4/6/2016 5:24:34 PM.
+﻿Build started 4/6/2016 6:12:05 PM.
      1>Project "C:\Users\shooksie\Source\Repos\Project-2\ElevatorProject\ElevatorProject.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt Main.cpp
-         Main.cpp
-     1>c:\users\shooksie\source\repos\project-2\elevatorproject\main.cpp(29): warning C4101: 'NumberElevators': unreferenced local variable
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\shooksie\Source\Repos\Project-2\x64\Debug\ElevatorProject.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\shooksie\Source\Repos\Project-2\x64\Debug\ElevatorProject.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\shooksie\Source\Repos\Project-2\x64\Debug\ElevatorProject.lib" /MACHINE:X64 x64\Debug\Building.obj
-         x64\Debug\Elevator.obj
-         x64\Debug\Main.obj
+     1>Link:
          ElevatorProject.vcxproj -> C:\Users\shooksie\Source\Repos\Project-2\x64\Debug\ElevatorProject.exe
      1>Done Building Project "C:\Users\shooksie\Source\Repos\Project-2\ElevatorProject\ElevatorProject.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.89
+Time Elapsed 00:00:00.06
