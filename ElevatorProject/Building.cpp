@@ -70,10 +70,7 @@ void building::moveCalls() {
 void building::setLocation(list<call>::iterator here) {
 	location = floorCall.begin();
 }
-
-int building::moveElevators() {
-	int num = 0;
-	bool leaving;
+void building::pickup() {
 	list<call>::iterator floor;
 	for (floor = floorCall.begin(); floor != floorCall.end(); floor++) {
 		if (floor->floor == elevators[0].getLevel() && !floor->pickedUP) {
@@ -81,9 +78,12 @@ int building::moveElevators() {
 			floor->pickedUP = true;
 		}
 	}
+}
+int building::dropoff(int num) {
+	list<call>::iterator floor;
 	list<int>::iterator dest;
 	dest = elevators[0].destinations.begin();
-	while(dest != elevators[0].destinations.end()) {
+	while (dest != elevators[0].destinations.end()) {
 		if (*dest == elevators[0].getLevel()) {
 			for (floor = floorCall.begin(); floor != floorCall.end(); floor++) {
 				if (floor->goal == elevators[0].getLevel() && floor->pickedUP && !floor->arrived) {
@@ -96,6 +96,14 @@ int building::moveElevators() {
 		}
 		dest++;
 	}
+	return num;
+}
+int building::moveElevators() {
+	int num = 0;
+	bool leaving;
+	pickup();
+	num = dropoff(num);
+	
 	if (!elevators[0].destinations.empty()) {
 		list<call>::iterator Oitr;
 		for (Oitr = floorCall.begin(); Oitr != floorCall.end(); Oitr++) {
