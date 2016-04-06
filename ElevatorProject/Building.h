@@ -49,6 +49,6 @@ public:
 	int moveElevators();
 	void simulate();
 	void pickup();
-	int dropoff( int num);
-	int createCalls(int requests, int percentage, int possiblePeople);
+	int dropoff( int num);//drops all the people that need to be dropped of on the way
+	int createCalls(int requests, int percentage, int possiblePeople);//creates a random number of calls on the way up
 };

@@ -119,7 +119,7 @@ void building::simulate() {
 	int index = 0;
 	int count = 0;
 	srand(time(NULL));
-
+	int time = 0;
 	while (index < 24) {
 		elevators[0].restart(0);
 		int requests = 0;
@@ -191,103 +191,6 @@ void building::simulate() {
 
 	}
 }
-/*void building::simulate() {
-
-	int count = 0;
-	srand(time(NULL));
-	
-	int index = 0;
-	while (index < 10) {
-		elevators[0].restart(0);
-		int requests = 0;
-		int complete = 0;
-		if (!floorCall.empty()) {
-			floorCall.clear();
-		}
-		
-		/*  
-		int possiblePeople = rand() % 50;
-
-		for (int z = 0; z < possiblePeople; z++) {
-
-			bool TrueFalse = ((rand() % 100) < 10);
-			if (TrueFalse) {
-				generate();
-				requests++;
-			}
-		}
-		
-		call newCall;
-		newCall.floor = 0;
-		newCall.goal = 4;
-		newCall.pickedUP = false;
-		newCall.arrived = false;
-		newCall.direction = 1;
-		newCall.waitingTime = 0;
-		call newCall1;
-		newCall1.floor = 0;
-		newCall1.goal = 2;
-		newCall1.pickedUP = false;
-		newCall1.arrived = false;
-		newCall1.direction = 1;
-		newCall1.waitingTime = 0;
-		floorCall.push_back(newCall);
-		floorCall.push_back(newCall1);
-		//generate();
-		//generate();
-		requests++;
-		requests++;
-		call newCall2;
-		newCall2.floor = 6;
-		newCall2.goal = 0;
-		newCall2.pickedUP = false;
-		newCall2.arrived = false;
-		newCall2.direction = 0;
-		newCall2.waitingTime = 0;
-		floorCall.push_back(newCall2);
-		requests++;
-		call newCall3;
-		newCall3.floor = 5;
-		newCall3.goal = 6;
-		newCall3.pickedUP = false;
-		newCall3.arrived = false;
-		newCall3.direction = 0;
-		newCall3.waitingTime = 0;
-		floorCall.push_back(newCall3);
-		requests++;
-		setLocation(location);
-
-		while ( (complete < requests) || !floorCall.empty()) {
-			moveCalls();
-			complete += moveElevators();
-			if (elevators[0].destinations.size() == 1 && elevators[0].destinations.front() == elevators[0].getLevel()) {
-				elevators[0].destinations.pop_front();
-			}
-			// (if the first floor was the first destination & there are still destinations) or if people were let off
-			else if (elevators[0].destinations.size() > 1 && ((elevators[0].destinations.front() < elevators[0].getLevel() && elevators[0].direction == 1)||( elevators[0].destinations.front() > elevators[0].getLevel() && elevators[0].direction == 0)) || elevators[0].getExiting())
-				if (!elevators[0].destinations.empty()) {
-					elevators[0].destinations.pop_front();
-				}
-		}
-		cout << "Round: " << index++ << " There were " << requests << " requests" << endl;
-		dropOff(floorCall);
-		cout <<  endl;
-
-		list<call>::iterator itr;
-		int i = 1;
-		for (itr = floorCall.begin(); itr != floorCall.end(); itr++){
-			cout << "The waiting time for floorcall [" << i << "] was " << itr->waitingTime << endl;
-			i++;
-		}
-
-		cout << endl << endl;
-		
-		
-	}
-	
-	
-}
-*/
 void building::generate() {
 
 	int current_floor = rand() % 10;
