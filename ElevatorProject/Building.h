@@ -9,15 +9,12 @@ class elevator {
 private:
 	int current, floornumber;
 	bool up;
-	bool exits = false;
 	bool moving;
 public:
 	list<int> destinations;
 	int direction = -1;
-	void setExiting(bool yes_no){ exits = yes_no; }
 	void setMoving(bool yes_no) { moving = yes_no; }
-	bool getExiting() { return exits; }
-	bool getMoving() { return moving; }
+	bool isMoving() { return moving; }
 	void restart(int number) { current = number; }
 	void addDestination(int floor);
 	void moveUp() {if (current < floornumber) {++current; } };
@@ -45,7 +42,7 @@ public:
 	list<call>::iterator location = floorCall.begin();
 	void setLocation(list<call>::iterator here);
 	int getComplete() { return completeCalls; }
-	//void calcWaitingTime(list<call> requests);
+	void calcWaitingTime();
 	void generate();
 	bool searchDest(int target, list<int> theList);
 	bool searchCall(int target, list<call> theList);
