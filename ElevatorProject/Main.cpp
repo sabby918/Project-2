@@ -23,15 +23,31 @@ void main() {
 		}
 		case 2:
 			if (true) {
+				building Building;
 				int floorNumber;
 				int typeOfTraffic;
 				int NumberElevators;
 				cout << "specify the Number of floors" << endl << ">>";
 				cin >> floorNumber;
+				Building.setFloors(floorNumber);
+				Building.setElevator(floorNumber);
 				cout << "specify the type of traffic?" << endl << "1. low " << endl << "2. medium" << endl << "3. high" << endl << ">>";
 				cin >> typeOfTraffic;
-				cout << "specify the number of elevators?" << endl << ">>";
-				cin >> NumberElevators;
+				if (typeOfTraffic == 1)
+				{
+					Building.traffic = 25;
+				}
+				else if (typeOfTraffic == 2) {
+					Building.traffic = 50;
+				}
+				else if (typeOfTraffic == 3) {
+					Building.traffic = 75;
+				}
+				else {
+					cout << "Incorrect Choice was made so medium traffic wil be used" << endl;
+					Building.traffic = 50;
+				}
+				Building.simulate();
 			}
 			break;
 		case 3:

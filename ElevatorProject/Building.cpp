@@ -162,8 +162,7 @@ void building::simulate() {
 		}
 		 
 		int possiblePeople = rand() % 50;
-		int percentage = 50;
-		requests = createCalls(requests, 75, 10);
+		requests = createCalls(requests, traffic, 10);
 		setLocation(location);
 		while (requests > complete) {
 			moveCalls();
@@ -201,10 +200,10 @@ void building::simulate() {
 
 void building::generate() {
 
-	int current_floor = rand() % 10;
-	int desired_floor = rand() % 10;
+	int current_floor = rand() % floorNumbers;
+	int desired_floor = rand() % floorNumbers;
 	while (current_floor == desired_floor) {
-		desired_floor = rand() % 10;
+		desired_floor = rand() % floorNumbers;
 	}
 
 	call newCall;

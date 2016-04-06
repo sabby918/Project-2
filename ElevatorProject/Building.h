@@ -43,6 +43,7 @@ private:
 	int floorNumbers;
 	int completeCalls = 0;
 public:
+	int traffic = 50;
 	//where are we in the floorCall list
 	list<call>::iterator location = floorCall.begin();
 	void setLocation(list<call>::iterator here);
