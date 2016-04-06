@@ -138,6 +138,9 @@ int building::moveElevators() {
 
 void building::simulate() {
 	int index = 0;
+	int count = 0;
+	srand(time(NULL));
+
 	while (index < 10) {
 		elevators[0].restart(0);
 		int requests = 0;
@@ -145,7 +148,7 @@ void building::simulate() {
 		if (!floorCall.empty()) {
 			floorCall.clear();
 		}
-		call newCall;
+		/*call newCall;
 		newCall.floor = 0;
 		newCall.goal = 4;
 		newCall.pickedUP = false;
@@ -161,8 +164,7 @@ void building::simulate() {
 		newCall1.waitingTime = 0;
 		floorCall.push_back(newCall);
 		floorCall.push_back(newCall1);
-		//generate();
-		//generate();
+	
 		requests++;
 		requests++;
 		call newCall2;
@@ -183,6 +185,17 @@ void building::simulate() {
 		newCall3.waitingTime = 0;
 		floorCall.push_back(newCall3);
 		requests++;
+		*/
+		int possiblePeople = rand() % 50;
+
+		for (int z = 0; z < possiblePeople; z++) {
+
+			bool TrueFalse = ((rand() % 100) < 50);
+			if (TrueFalse) {
+				generate();
+				requests++;
+			}
+		}
 		setLocation(location);
 		while (requests > complete) {
 			moveCalls();
