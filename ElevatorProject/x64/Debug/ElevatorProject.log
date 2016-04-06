@@ -1,0 +1,9 @@
+﻿  Main.cpp
+  Generating Code...
+  Compiling...
+  Elevator.cpp
+  Building.cpp
+c:\users\sarah\downloads\sami\project-2-workaroundissues\elevatorproject\building.cpp(75): warning C4101: 'leaving': unreferenced local variable
+c:\users\sarah\downloads\sami\project-2-workaroundissues\elevatorproject\building.cpp(120): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  ElevatorProject.vcxproj -> C:\Users\Sarah\Downloads\sami\Project-2-Workaroundissues\x64\Debug\ElevatorProject.exe

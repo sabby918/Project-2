@@ -6,11 +6,8 @@ void main(){
 
 	building one;
 
-	
-
 	one.setFloors(10);
-	one.setElevator(1);
-	one.generate();
+	one.setElevator(10);
 	one.simulate();
 
 	system("pause");

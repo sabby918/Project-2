@@ -1,7 +1,7 @@
 #include "building.h"
 
 
-void Elevator::addDestination(int floor) {
+void elevator::addDestination(int floor) {
 	list<int>::iterator itr;
 	moving = true;
 	if (destinations.empty()) {
@@ -28,20 +28,19 @@ void Elevator::addDestination(int floor) {
 	return;
 }
 
-void Elevator::checkDestinations() {
+void elevator::checkDestinations() {
 	list<int>::iterator itr;
 	if (destinations.empty())
 		return;
 	for (itr = destinations.begin(); itr != destinations.end(); itr++) {
 		if (*itr == current) {
-			
-			destinations.remove(*itr);
+	
 			return;
 		}
 	}
 }
 
-void Elevator::move() {
+void elevator::move() {
 
 	changeDirection();
 
@@ -65,7 +64,7 @@ void Elevator::move() {
 }
 
 
-void Elevator::changeDirection() {
+void elevator::changeDirection() {
 	list<int>::iterator itr;
 	if (up) {
 		bool greater = false;
