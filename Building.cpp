@@ -20,7 +20,7 @@ int timeCoversion(int time, ostream& file) {
 			<< seconds << " Secs";
 	}
 
-	return time/30;
+	return time/10;
 }
 
 void building::setElevator(int number) {
