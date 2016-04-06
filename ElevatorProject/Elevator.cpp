@@ -1,6 +1,7 @@
 #include "building.h"
 
 
+
 void elevator::addDestination(int floor) {
 	list<int>::iterator itr;
 	moving = true;

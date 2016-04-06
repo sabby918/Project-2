@@ -11,6 +11,7 @@ private:
 	bool up;
 	bool moving;
 public:
+	// log of where the elevator will go
 	list<int> destinations;
 	int direction = -1;
 	void restart(int number) { current = number; }
@@ -30,23 +31,31 @@ public:
 class building {
 	friend class elevator;
 private:
+
 	struct call { int floor, goal, direction, waitingTime; bool pickedUP, arrived; };
+
+	// list of all the calls that are generated for that round
 	list<call> floorCall;
 	elevator theElevator;
 	int elevatorNumber;
+
+	//total number of floors in the building
 	int floorNumbers;
 	int completeCalls = 0;
 public:
+	//where are we in the floorCall list
 	list<call>::iterator location = floorCall.begin();
 	void setLocation(list<call>::iterator here);
 	int getComplete() { return completeCalls; }
 	void calcWaitingTime();
+
+	//creates a random call
 	void generate();
 	bool searchDest(int target, list<int> theList);
 	bool searchCall(int target, list<call> theList);
 	void setElevator(int number = 1);
 	void setFloors(int floors = 10);
-	void dropOff(list<call> requests);
+	void dropOff(list<call> requests, ostream& file);
 	void moveCalls();
 	int moveElevators();
 	void simulate();
