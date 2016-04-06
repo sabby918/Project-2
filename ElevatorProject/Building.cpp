@@ -39,7 +39,6 @@ void building::dropOff(list<call> request) {
 	}
 
 }
-
 void building::moveCalls() {
 	if (floorCall.size() == 0)
 		return;
@@ -47,43 +46,57 @@ void building::moveCalls() {
 	if (location == floorCall.end()) {
 		return;
 	}
-	list<call>::iterator floor;
-	list<call>::iterator outside;
-	list<int>::iterator inside;
-
-	// go through all floor calls
-	for (outside = floorCall.begin(); outside != floorCall.end(); outside++) {
-
-		// if it is the first floor call there are no previous destinations
-		if (elevators[0].destinations.empty()) {
-			elevators[0].addDestination(location->floor);
-			location++;
+	list<call>::iterator itr;
+	itr = floorCall.begin();
+	while (itr != floorCall.end()) {
+		if (elevators[0].destinations.empty() && !itr->pickedUP) {
+			elevators[0].addDestination(itr->floor);
+			return;
 		}
-		else {
-			// going through the floor calls again
-			for (floor = ++floorCall.begin(); floor != floorCall.end(); floor++) {
-				// if there are multiple requests from the same floor -- do nothing
-				for (inside = elevators[0].destinations.begin(); inside != elevators[0].destinations.end(); inside++) {
-					// if the goal is aready in the destination log
-					if (floor->goal == *inside && floor->direction == elevators[0].direction) {
-						cout << "going there already" << endl;
-						if (location != floorCall.end()) {
-							location++;
-							return;
-						}
-					}
-				}
-				if (floor != floorCall.end()) {
-					floor++;
-				}
-			}
-		}
+		itr++;
 	}
+	
+	// go through all floor calls
 }
+
 void building::setLocation(list<call>::iterator here) {
 	location = floorCall.begin();
 }
+
 int building::moveElevators() {
+	int num = 0;
+	bool leaving;
+	list<call>::iterator floor;
+	for (floor = floorCall.begin(); floor != floorCall.end(); floor++) {
+		if (floor->floor == elevators[0].getLevel() && !floor->pickedUP) {
+			elevators[0].addDestination(floor->goal);
+			floor->pickedUP = true;
+		}
+	}
+	list<int>::iterator dest;
+	dest = elevators[0].destinations.begin();
+	while(dest != elevators[0].destinations.end()) {
+		if (*dest == elevators[0].getLevel()) {
+			for (floor = floorCall.begin(); floor != floorCall.end(); floor++) {
+				if (floor->goal == elevators[0].getLevel() && floor->pickedUP && !floor->arrived) {
+					floor->arrived = true;
+					num++;
+				}
+			}
+			elevators[0].destinations.erase(dest);
+			break;
+		}
+		dest++;
+	}
+	list<call>::iterator Oitr;
+	for (Oitr = floorCall.begin(); Oitr != floorCall.end(); Oitr++) {
+		if (Oitr->arrived == false)
+			Oitr->waitingTime++;
+	}
+	elevators[0].move();
+	return num;
+}
+/*int building::moveElevators() {
 	bool leaving;
 	int done = getComplete();
 	list<call>::iterator itr;
@@ -101,7 +114,7 @@ int building::moveElevators() {
 			floorCall.erase(itr);
 			if (floorCall.empty())
 				return;
-			itr = floorCall.begin();*/
+			itr = floorCall.begin();
 			++done;
 			leaving = true;
 		}
@@ -121,11 +134,9 @@ int building::moveElevators() {
 	///////////////////////////////////////////////
 	return done;
 }
-void building::simulate() {
+*/
 
-	int count = 0;
-	srand(time(NULL));
-	
+void building::simulate() {
 	int index = 0;
 	while (index < 10) {
 		elevators[0].restart(0);
@@ -134,19 +145,6 @@ void building::simulate() {
 		if (!floorCall.empty()) {
 			floorCall.clear();
 		}
-		
-		/*  
-		int possiblePeople = rand() % 50;
-
-		for (int z = 0; z < possiblePeople; z++) {
-
-			bool TrueFalse = ((rand() % 100) < 10);
-			if (TrueFalse) {
-				generate();
-				requests++;
-			}
-		}
-		*/
 		call newCall;
 		newCall.floor = 0;
 		newCall.goal = 4;
@@ -176,10 +174,104 @@ void building::simulate() {
 		newCall2.waitingTime = 0;
 		floorCall.push_back(newCall2);
 		requests++;
+		call newCall3;
+		newCall3.floor = 5;
+		newCall3.goal = 6;
+		newCall3.pickedUP = false;
+		newCall3.arrived = false;
+		newCall3.direction = 0;
+		newCall3.waitingTime = 0;
+		floorCall.push_back(newCall3);
+		requests++;
+		setLocation(location);
+		while (requests > complete) {
+			moveCalls();
+			while (!elevators[0].destinations.empty()) {
+				complete += moveElevators();
+			}
+		}
+		cout << "Round: " << index++ << " There were " << requests << " requests" << endl;
+		dropOff(floorCall);
+		cout << endl;
 
+		list<call>::iterator itr;
+		int i = 1;
+		for (itr = floorCall.begin(); itr != floorCall.end(); itr++) {
+			cout << "The waiting time for floorcall [" << i << "] was " << itr->waitingTime << endl;
+			i++;
+		}
+
+		cout << endl << endl;
+
+	}
+}
+/*void building::simulate() {
+
+	int count = 0;
+	srand(time(NULL));
+	
+	int index = 0;
+	while (index < 10) {
+		elevators[0].restart(0);
+		int requests = 0;
+		int complete = 0;
+		if (!floorCall.empty()) {
+			floorCall.clear();
+		}
+		
+		/*  
+		int possiblePeople = rand() % 50;
+
+		for (int z = 0; z < possiblePeople; z++) {
+
+			bool TrueFalse = ((rand() % 100) < 10);
+			if (TrueFalse) {
+				generate();
+				requests++;
+			}
+		}
+		
+		call newCall;
+		newCall.floor = 0;
+		newCall.goal = 4;
+		newCall.pickedUP = false;
+		newCall.arrived = false;
+		newCall.direction = 1;
+		newCall.waitingTime = 0;
+		call newCall1;
+		newCall1.floor = 0;
+		newCall1.goal = 2;
+		newCall1.pickedUP = false;
+		newCall1.arrived = false;
+		newCall1.direction = 1;
+		newCall1.waitingTime = 0;
+		floorCall.push_back(newCall);
+		floorCall.push_back(newCall1);
+		//generate();
+		//generate();
+		requests++;
+		requests++;
+		call newCall2;
+		newCall2.floor = 6;
+		newCall2.goal = 0;
+		newCall2.pickedUP = false;
+		newCall2.arrived = false;
+		newCall2.direction = 0;
+		newCall2.waitingTime = 0;
+		floorCall.push_back(newCall2);
+		requests++;
+		call newCall3;
+		newCall3.floor = 5;
+		newCall3.goal = 6;
+		newCall3.pickedUP = false;
+		newCall3.arrived = false;
+		newCall3.direction = 0;
+		newCall3.waitingTime = 0;
+		floorCall.push_back(newCall3);
+		requests++;
 		setLocation(location);
 
-		while ( (complete < requests) ||!elevators[0].destinations.empty()) {
+		while ( (complete < requests) || !floorCall.empty()) {
 			moveCalls();
 			complete += moveElevators();
 			if (elevators[0].destinations.size() == 1 && elevators[0].destinations.front() == elevators[0].getLevel()) {
@@ -209,7 +301,7 @@ void building::simulate() {
 	
 	
 }
-
+*/
 void building::generate() {
 
 	int current_floor = rand() % 10;

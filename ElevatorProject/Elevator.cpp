@@ -34,8 +34,7 @@ void Elevator::checkDestinations() {
 		return;
 	for (itr = destinations.begin(); itr != destinations.end(); itr++) {
 		if (*itr == current) {
-			
-			destinations.remove(*itr);
+	
 			return;
 		}
 	}

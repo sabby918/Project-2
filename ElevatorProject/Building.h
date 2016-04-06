@@ -18,8 +18,8 @@ public:
 	bool getExiting() { return exits; }
 	void restart(int number) { current = number; }
 	void addDestination(int floor);
-	void moveUp() {if (current < floornumber) {++current; checkDestinations(); } };
-	void moveDown() {if (current > 0) {--current; checkDestinations(); } };
+	void moveUp() {if (current < floornumber) {++current; } };
+	void moveDown() {if (current > 0) {--current; } };
 	void checkDestinations();
 	void changeDirection();
 	void move();
