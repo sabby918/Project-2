@@ -13,19 +13,17 @@ private:
 public:
 	list<int> destinations;
 	int direction = -1;
+	void restart(int number) { current = number; }
 	void setMoving(bool yes_no) { moving = yes_no; }
 	bool isMoving() { return moving; }
-	void restart(int number) { current = number; }
 	void addDestination(int floor);
 	void moveUp() {if (current < floornumber) {++current; } };
 	void moveDown() {if (current > 0) {--current; } };
 	void checkDestinations();
-	
 	void changeDirection();
 	void move();
-	void setNumFloors(int floor) { floornumber = floor; };
+	void setNumFloor(int floor) {floornumber = floor; };
 	int getLevel() { return current; }
-
 
 };
 
@@ -52,4 +50,7 @@ public:
 	void moveCalls();
 	int moveElevators();
 	void simulate();
+	void pickup();
+	int dropoff(int num);
+	int createCalls(int requests, int percentage, int possiblePeople);
 };

@@ -3,54 +3,19 @@
 #include <iostream>
 
 
+void timeCoversion(int time) {
+
+	time *= 30;
+	int minutes = time / 60;
+	int seconds = time % 60;
+	cout << minutes << " Minutes " 
+		<< seconds << " Seconds";
+}
+
 void building::setElevator(int number) {
-	theElevator.setNumFloors(number);
-}
 
-void building::setFloors(int floor) {
-	floorNumbers = floor;
-}
+	theElevator.setNumFloor(floorNumbers);
 
-
-// determine where the request began, and where it was dropped off at
-void building::dropOff(list<call> request) {
-	list<call>::iterator itr;
-
-	vector<call> people;
-
-	for (itr = request.begin(); itr != request.end(); itr++) {
-		if (itr->arrived) {
-			people.push_back(*itr);
-		}
-	}
-	for (int i = 0; i < people.size(); i++) {
-		cout << "Request ["<< i+1 << "] went from floor " << people[i].floor << " to floor " << people[i].goal << endl;
-	}
-
-}
-
-//add call to destination log
-void building::moveCalls() {
-	if (floorCall.size() == 0)
-		return;
-
-	if (location == floorCall.end()) {
-		return;
-	}
-	list<call>::iterator itr;
-	itr = floorCall.begin();
-	while (itr != floorCall.end()) {
-		if (theElevator.destinations.empty() && !itr->pickedUP) {
-			theElevator.addDestination(itr->floor);
-			return;
-		}
-		itr++;
-	}
-}
-
-
-void building::setLocation(list<call>::iterator here) {
-	location = floorCall.begin();
 }
 
 // return true if target was found
@@ -73,6 +38,7 @@ bool building::searchCall(int target, list<call> theList) {
 	return false;
 }
 
+
 //increase time if call has not arrived
 void building::calcWaitingTime() {
 	list <call> ::iterator itr;
@@ -82,23 +48,65 @@ void building::calcWaitingTime() {
 	}
 }
 
-// moves elevator up and down && checks to see if there is a request entering and leaving the floor
-int building::moveElevators() {
-	int num = 0;
-	bool leaving;
+void building::setFloors(int floor) {
+	floorNumbers = floor;
+}
+
+void building::dropOff(list<call> request) {
+	list<call>::iterator itr;
+
+	vector<call> people;
+
+	// push all the people that have arrived at there destination
+	for (itr = request.begin(); itr != request.end(); itr++) {
+		if (itr->arrived) {
+			people.push_back(*itr);
+		}
+	}
+	for (int i = 0; i < people.size(); i++) {
+		cout << "Request went from floor " << people[i].floor << " to floor " << people[i].goal << endl;
+	}
+
+}
+void building::moveCalls() {
+	if (floorCall.size() == 0)
+		return;
+
+	if (location == floorCall.end()) {
+		return;
+	}
+	list<call>::iterator itr;
+	itr = floorCall.begin();
+	while (itr != floorCall.end()) {
+		if (theElevator.destinations.empty() && !itr->pickedUP) {
+			theElevator.addDestination(itr->floor);
+			return;
+		}
+		itr++;
+	}
+}
+
+void building::setLocation(list<call>::iterator here) {
+	location = floorCall.begin();
+}
+
+void building::pickup() {
 	list<call>::iterator floor;
 	for (floor = floorCall.begin(); floor != floorCall.end(); floor++) {
 		if (floor->floor == theElevator.getLevel() && !floor->pickedUP) {
-			floor->pickedUP = true;
 			if (!searchDest(floor->goal, theElevator.destinations)) {
 				theElevator.addDestination(floor->goal);
 			}
+			floor->pickedUP = true;
 		}
 	}
+}
 
+int building::dropoff(int num) {
+	list<call>::iterator floor;
 	list<int>::iterator dest;
 	dest = theElevator.destinations.begin();
-	while(dest != theElevator.destinations.end()) {
+	while (dest != theElevator.destinations.end()) {
 		if (*dest == theElevator.getLevel()) {
 			for (floor = floorCall.begin(); floor != floorCall.end(); floor++) {
 				if (floor->goal == theElevator.getLevel() && floor->pickedUP && !floor->arrived) {
@@ -111,41 +119,41 @@ int building::moveElevators() {
 		}
 		dest++;
 	}
-	
+	return num;
+}
+int building::moveElevators() {
+	int num = 0;
+	bool leaving;
+	pickup();
+
+	num = dropoff(num);
 
 	theElevator.move();
+
+
 	if (theElevator.isMoving()) {
 		calcWaitingTime();
 	}
-	// the number of people that have arrived
+
 	return num;
 }
-
 
 void building::simulate() {
 	int index = 0;
 	int count = 0;
 	srand(time(NULL));
 
-	while (index < 10) {
+	while (index < 1) {
 		theElevator.restart(0);
 		int requests = 0;
 		int complete = 0;
 		if (!floorCall.empty()) {
 			floorCall.clear();
 		}
-		
+		 
 		int possiblePeople = rand() % 50;
-
-		for (int z = 0; z < possiblePeople; z++) {
-
-			bool TrueFalse = ((rand() % 100) < 50);
-			if (TrueFalse) {
-				generate();
-				requests++;
-			}
-		} 
-
+		int percentage = 50;
+		requests = createCalls(requests, 75, 100);
 		setLocation(location);
 		while (requests > complete) {
 			moveCalls();
@@ -153,31 +161,25 @@ void building::simulate() {
 				complete += moveElevators();
 			}
 		}
+
 		cout << "Round: " << index++ << " There were " << requests << " requests" << endl;
 		dropOff(floorCall);
 		cout << endl;
 
 		list<call>::iterator itr;
-		int total = 0;
 		int i = 1;
 		for (itr = floorCall.begin(); itr != floorCall.end(); itr++) {
-			cout << "The waiting time for floorcall [" << i << "] was " << itr->waitingTime << endl;
+			cout << "The waiting time for floorcall [" << i << "] was "; timeCoversion(itr->waitingTime);
+				cout << endl;
+				cout << itr->waitingTime << endl;
 			i++;
-			total += itr->waitingTime;
-
 		}
-		
-		cout << endl;
 
-		if (requests > 0) {
-			cout << "There was a total of " << total << " seconds" << endl
-				<< "There was an average of " << total / requests << " seconds per request" << endl;
-			cout << endl << endl;
-		}
+		cout << endl << endl;
+
 	}
 }
 
-// creates a random request
 void building::generate() {
 
 	int current_floor = rand() % 10;
@@ -208,3 +210,16 @@ void building::generate() {
 		return;
 	}
 }
+int building::createCalls(int requests, int percentage, int possiblePeople) {
+
+	for (int z = 0; z < possiblePeople; z++) {
+
+		bool TrueFalse = ((rand() % 100) < percentage);
+		if (TrueFalse) {
+			generate();
+			requests++;
+		}
+	}
+	return requests;
+}
+
