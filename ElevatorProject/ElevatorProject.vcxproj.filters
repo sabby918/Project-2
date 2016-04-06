@@ -32,6 +32,5 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="example.txt" />
-    <Text Include="elevator.txt" />
   </ItemGroup>
 </Project>

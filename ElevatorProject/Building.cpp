@@ -156,7 +156,9 @@ void building::simulate() {
 	int count = 0;
 	srand(time(NULL));
 	ofstream fout;
+
 	fout.open("example.txt");
+	fout.clear();
 	while (index < 10) {
 		roundTime = 0;
 		theElevator.restart(0);
@@ -224,7 +226,6 @@ void building::simulate() {
 }
 
 void building::generate() {
-
 	int current_floor = rand() % floorNumbers;
 	int desired_floor = rand() % floorNumbers;
 	while (current_floor == desired_floor) {
