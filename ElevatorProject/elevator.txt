@@ -1,0 +1,725 @@
+	     Round: 1 There were 26 requests
+
+Request		Start		Goal		Time		Approx.
+____________________________________________________________________________________________________
+
+1	|	4	|	3	|	11	|	1 Min 50 Secs
+2	|	2	|	7	|	7	|	1 Min 10 Secs
+3	|	7	|	0	|	14	|	2 Mins 20 Secs
+4	|	1	|	7	|	7	|	1 Min 10 Secs
+5	|	3	|	7	|	7	|	1 Min 10 Secs
+6	|	4	|	0	|	8	|	1 Min 20 Secs
+7	|	9	|	5	|	21	|	3 Mins 30 Secs
+8	|	9	|	0	|	26	|	4 Mins 20 Secs
+9	|	9	|	8	|	10	|	1 Min 40 Secs
+10	|	2	|	1	|	3	|	0 Mins 30 Secs
+11	|	8	|	3	|	17	|	2 Mins 50 Secs
+12	|	1	|	0	|	17	|	2 Mins 50 Secs
+13	|	3	|	0	|	17	|	2 Mins 50 Secs
+14	|	3	|	0	|	17	|	2 Mins 50 Secs
+15	|	8	|	9	|	8	|	1 Min 20 Secs
+16	|	0	|	9	|	9	|	1 Min 30 Secs
+17	|	6	|	3	|	15	|	2 Mins 30 Secs
+18	|	6	|	3	|	15	|	2 Mins 30 Secs
+19	|	8	|	5	|	8	|	1 Min 20 Secs
+20	|	5	|	1	|	12	|	2 Mins 0 Secs
+21	|	4	|	7	|	6	|	1 Min 0 Secs
+22	|	6	|	8	|	7	|	1 Min 10 Secs
+23	|	9	|	6	|	11	|	1 Min 50 Secs
+24	|	7	|	1	|	9	|	1 Min 30 Secs
+25	|	1	|	9	|	8	|	1 Min 20 Secs
+26	|	3	|	1	|	16	|	2 Mins 40 Secs
+
+Average Time: 1 Min 50 Secs
+RoundTime: 19 Mins 20 Secs
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	     Round: 2 There were 96 requests
+
+Request		Start		Goal		Time		Approx.
+____________________________________________________________________________________________________
+
+1	|	5	|	9	|	9	|	1 Min 30 Secs
+2	|	3	|	0	|	18	|	3 Mins 0 Secs
+3	|	2	|	4	|	4	|	0 Mins 40 Secs
+4	|	7	|	2	|	12	|	2 Mins 0 Secs
+5	|	2	|	1	|	13	|	2 Mins 10 Secs
+6	|	9	|	0	|	30	|	5 Mins 0 Secs
+7	|	2	|	9	|	8	|	1 Min 20 Secs
+8	|	6	|	9	|	8	|	1 Min 20 Secs
+9	|	4	|	9	|	9	|	1 Min 30 Secs
+10	|	3	|	7	|	7	|	1 Min 10 Secs
+11	|	8	|	7	|	11	|	1 Min 50 Secs
+12	|	5	|	7	|	4	|	0 Mins 40 Secs
+13	|	9	|	0	|	15	|	2 Mins 30 Secs
+14	|	0	|	8	|	23	|	3 Mins 50 Secs
+15	|	1	|	0	|	11	|	1 Min 50 Secs
+16	|	9	|	2	|	9	|	1 Min 30 Secs
+17	|	9	|	6	|	4	|	0 Mins 40 Secs
+18	|	7	|	0	|	10	|	1 Min 40 Secs
+19	|	9	|	3	|	7	|	1 Min 10 Secs
+20	|	4	|	9	|	9	|	1 Min 30 Secs
+21	|	8	|	9	|	9	|	1 Min 30 Secs
+22	|	4	|	7	|	7	|	1 Min 10 Secs
+23	|	1	|	2	|	2	|	0 Mins 20 Secs
+24	|	8	|	6	|	3	|	0 Mins 30 Secs
+25	|	0	|	6	|	15	|	2 Mins 30 Secs
+26	|	2	|	4	|	10	|	1 Min 40 Secs
+27	|	1	|	2	|	8	|	1 Min 20 Secs
+28	|	9	|	5	|	19	|	3 Mins 10 Secs
+29	|	7	|	0	|	12	|	2 Mins 0 Secs
+30	|	8	|	2	|	10	|	1 Min 40 Secs
+31	|	7	|	8	|	2	|	0 Mins 20 Secs
+32	|	2	|	0	|	4	|	0 Mins 40 Secs
+33	|	4	|	6	|	10	|	1 Min 40 Secs
+34	|	5	|	2	|	14	|	2 Mins 20 Secs
+35	|	9	|	4	|	26	|	4 Mins 20 Secs
+36	|	0	|	8	|	8	|	1 Min 20 Secs
+37	|	1	|	5	|	19	|	3 Mins 10 Secs
+38	|	0	|	3	|	35	|	5 Mins 50 Secs
+39	|	2	|	9	|	7	|	1 Min 10 Secs
+40	|	5	|	6	|	8	|	1 Min 20 Secs
+41	|	5	|	6	|	8	|	1 Min 20 Secs
+42	|	1	|	9	|	11	|	1 Min 50 Secs
+43	|	1	|	7	|	9	|	1 Min 30 Secs
+44	|	0	|	3	|	12	|	2 Mins 0 Secs
+45	|	6	|	3	|	6	|	1 Min 0 Secs
+46	|	1	|	7	|	8	|	1 Min 20 Secs
+47	|	8	|	3	|	14	|	2 Mins 20 Secs
+48	|	5	|	8	|	9	|	1 Min 30 Secs
+49	|	2	|	1	|	2	|	0 Mins 20 Secs
+50	|	5	|	0	|	19	|	3 Mins 10 Secs
+51	|	7	|	0	|	17	|	2 Mins 50 Secs
+52	|	8	|	6	|	11	|	1 Min 50 Secs
+53	|	5	|	9	|	8	|	1 Min 20 Secs
+54	|	4	|	9	|	9	|	1 Min 30 Secs
+55	|	9	|	5	|	4	|	0 Mins 40 Secs
+56	|	2	|	4	|	9	|	1 Min 30 Secs
+57	|	9	|	2	|	7	|	1 Min 10 Secs
+58	|	4	|	1	|	3	|	0 Mins 30 Secs
+59	|	3	|	1	|	3	|	0 Mins 30 Secs
+60	|	5	|	1	|	11	|	1 Min 50 Secs
+61	|	9	|	7	|	18	|	3 Mins 0 Secs
+62	|	1	|	2	|	1	|	0 Mins 10 Secs
+63	|	6	|	0	|	25	|	4 Mins 10 Secs
+64	|	7	|	6	|	19	|	3 Mins 10 Secs
+65	|	5	|	7	|	6	|	1 Min 0 Secs
+66	|	9	|	8	|	9	|	1 Min 30 Secs
+67	|	2	|	7	|	7	|	1 Min 10 Secs
+68	|	0	|	4	|	4	|	0 Mins 40 Secs
+69	|	8	|	5	|	11	|	1 Min 50 Secs
+70	|	2	|	0	|	9	|	1 Min 30 Secs
+71	|	3	|	8	|	13	|	2 Mins 10 Secs
+72	|	6	|	9	|	14	|	2 Mins 20 Secs
+73	|	3	|	5	|	8	|	1 Min 20 Secs
+74	|	1	|	2	|	5	|	0 Mins 50 Secs
+75	|	2	|	7	|	10	|	1 Min 40 Secs
+76	|	5	|	8	|	11	|	1 Min 50 Secs
+77	|	7	|	6	|	13	|	2 Mins 10 Secs
+78	|	3	|	7	|	10	|	1 Min 40 Secs
+79	|	7	|	3	|	5	|	0 Mins 50 Secs
+80	|	1	|	7	|	13	|	2 Mins 10 Secs
+81	|	2	|	3	|	9	|	1 Min 30 Secs
+82	|	6	|	9	|	10	|	1 Min 40 Secs
+83	|	2	|	4	|	5	|	0 Mins 50 Secs
+84	|	6	|	9	|	10	|	1 Min 40 Secs
+85	|	2	|	7	|	12	|	2 Mins 0 Secs
+86	|	4	|	6	|	5	|	0 Mins 50 Secs
+87	|	6	|	4	|	3	|	0 Mins 30 Secs
+88	|	2	|	5	|	11	|	1 Min 50 Secs
+89	|	5	|	0	|	6	|	1 Min 0 Secs
+90	|	3	|	0	|	6	|	1 Min 0 Secs
+91	|	7	|	8	|	14	|	2 Mins 20 Secs
+92	|	4	|	8	|	19	|	3 Mins 10 Secs
+93	|	6	|	5	|	6	|	1 Min 0 Secs
+94	|	8	|	3	|	8	|	1 Min 20 Secs
+95	|	8	|	0	|	11	|	1 Min 50 Secs
+96	|	1	|	2	|	13	|	2 Mins 10 Secs
+
+Average Time: 1 Min 40 Secs
+RoundTime: 61 Mins 20 Secs
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	     Round: 3 There were 80 requests
+
+Request		Start		Goal		Time		Approx.
+____________________________________________________________________________________________________
+
+1	|	0	|	2	|	2	|	0 Mins 20 Secs
+2	|	9	|	4	|	14	|	2 Mins 20 Secs
+3	|	1	|	6	|	6	|	1 Min 0 Secs
+4	|	4	|	8	|	8	|	1 Min 20 Secs
+5	|	8	|	3	|	7	|	1 Min 10 Secs
+6	|	3	|	5	|	9	|	1 Min 30 Secs
+7	|	9	|	0	|	13	|	2 Mins 10 Secs
+8	|	6	|	7	|	2	|	0 Mins 20 Secs
+9	|	7	|	4	|	12	|	2 Mins 0 Secs
+10	|	1	|	8	|	8	|	1 Min 20 Secs
+11	|	7	|	1	|	15	|	2 Mins 30 Secs
+12	|	2	|	8	|	8	|	1 Min 20 Secs
+13	|	6	|	4	|	12	|	2 Mins 0 Secs
+14	|	7	|	2	|	15	|	2 Mins 30 Secs
+15	|	1	|	9	|	8	|	1 Min 20 Secs
+16	|	8	|	6	|	11	|	1 Min 50 Secs
+17	|	6	|	7	|	5	|	0 Mins 50 Secs
+18	|	9	|	3	|	13	|	2 Mins 10 Secs
+19	|	8	|	6	|	5	|	0 Mins 50 Secs
+20	|	5	|	9	|	6	|	1 Min 0 Secs
+21	|	2	|	7	|	20	|	3 Mins 20 Secs
+22	|	1	|	3	|	16	|	2 Mins 40 Secs
+23	|	4	|	8	|	15	|	2 Mins 30 Secs
+24	|	3	|	1	|	8	|	1 Min 20 Secs
+25	|	8	|	5	|	4	|	0 Mins 40 Secs
+26	|	2	|	1	|	7	|	1 Min 10 Secs
+27	|	3	|	4	|	10	|	1 Min 40 Secs
+28	|	6	|	4	|	8	|	1 Min 20 Secs
+29	|	1	|	8	|	18	|	3 Mins 0 Secs
+30	|	8	|	6	|	6	|	1 Min 0 Secs
+31	|	5	|	8	|	4	|	0 Mins 40 Secs
+32	|	1	|	9	|	11	|	1 Min 50 Secs
+33	|	3	|	7	|	9	|	1 Min 30 Secs
+34	|	2	|	6	|	8	|	1 Min 20 Secs
+35	|	3	|	0	|	9	|	1 Min 30 Secs
+36	|	1	|	6	|	15	|	2 Mins 30 Secs
+37	|	0	|	8	|	17	|	2 Mins 50 Secs
+38	|	6	|	3	|	5	|	0 Mins 50 Secs
+39	|	0	|	4	|	12	|	2 Mins 0 Secs
+40	|	7	|	6	|	11	|	1 Min 50 Secs
+41	|	3	|	7	|	10	|	1 Min 40 Secs
+42	|	2	|	9	|	11	|	1 Min 50 Secs
+43	|	0	|	5	|	25	|	4 Mins 10 Secs
+44	|	5	|	6	|	8	|	1 Min 20 Secs
+45	|	6	|	2	|	7	|	1 Min 10 Secs
+46	|	0	|	1	|	6	|	1 Min 0 Secs
+47	|	7	|	5	|	14	|	2 Mins 20 Secs
+48	|	6	|	2	|	17	|	2 Mins 50 Secs
+49	|	3	|	7	|	12	|	2 Mins 0 Secs
+50	|	5	|	9	|	7	|	1 Min 10 Secs
+51	|	3	|	9	|	7	|	1 Min 10 Secs
+52	|	9	|	3	|	13	|	2 Mins 10 Secs
+53	|	7	|	1	|	10	|	1 Min 40 Secs
+54	|	1	|	5	|	4	|	0 Mins 40 Secs
+55	|	0	|	4	|	19	|	3 Mins 10 Secs
+56	|	4	|	8	|	7	|	1 Min 10 Secs
+57	|	3	|	5	|	4	|	0 Mins 40 Secs
+58	|	9	|	4	|	10	|	1 Min 40 Secs
+59	|	0	|	2	|	16	|	2 Mins 40 Secs
+60	|	7	|	2	|	12	|	2 Mins 0 Secs
+61	|	3	|	7	|	9	|	1 Min 30 Secs
+62	|	1	|	3	|	13	|	2 Mins 10 Secs
+63	|	4	|	1	|	6	|	1 Min 0 Secs
+64	|	0	|	4	|	17	|	2 Mins 50 Secs
+65	|	3	|	4	|	9	|	1 Min 30 Secs
+66	|	5	|	2	|	16	|	2 Mins 40 Secs
+67	|	9	|	8	|	24	|	4 Mins 0 Secs
+68	|	1	|	7	|	11	|	1 Min 50 Secs
+69	|	1	|	4	|	8	|	1 Min 20 Secs
+70	|	7	|	1	|	15	|	2 Mins 30 Secs
+71	|	3	|	5	|	3	|	0 Mins 30 Secs
+72	|	2	|	6	|	4	|	0 Mins 40 Secs
+73	|	9	|	3	|	14	|	2 Mins 20 Secs
+74	|	1	|	2	|	1	|	0 Mins 10 Secs
+75	|	2	|	6	|	5	|	0 Mins 50 Secs
+76	|	2	|	4	|	3	|	0 Mins 30 Secs
+77	|	5	|	9	|	5	|	0 Mins 50 Secs
+78	|	0	|	4	|	18	|	3 Mins 0 Secs
+79	|	7	|	0	|	14	|	2 Mins 20 Secs
+80	|	7	|	5	|	5	|	0 Mins 50 Secs
+
+Average Time: 1 Min 40 Secs
+RoundTime: 57 Mins 10 Secs
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	     Round: 4 There were 97 requests
+
+Request		Start		Goal		Time		Approx.
+____________________________________________________________________________________________________
+
+1	|	0	|	5	|	5	|	0 Mins 50 Secs
+2	|	2	|	6	|	6	|	1 Min 0 Secs
+3	|	1	|	8	|	8	|	1 Min 20 Secs
+4	|	0	|	2	|	2	|	0 Mins 20 Secs
+5	|	6	|	9	|	9	|	1 Min 30 Secs
+6	|	7	|	4	|	5	|	0 Mins 50 Secs
+7	|	9	|	3	|	6	|	1 Min 0 Secs
+8	|	9	|	0	|	9	|	1 Min 30 Secs
+9	|	2	|	6	|	6	|	1 Min 0 Secs
+10	|	2	|	1	|	11	|	1 Min 50 Secs
+11	|	1	|	0	|	1	|	0 Mins 10 Secs
+12	|	6	|	5	|	10	|	1 Min 40 Secs
+13	|	2	|	7	|	8	|	1 Min 20 Secs
+14	|	2	|	6	|	6	|	1 Min 0 Secs
+15	|	3	|	1	|	13	|	2 Mins 10 Secs
+16	|	7	|	1	|	13	|	2 Mins 10 Secs
+17	|	9	|	2	|	15	|	2 Mins 30 Secs
+18	|	0	|	6	|	23	|	3 Mins 50 Secs
+19	|	9	|	4	|	16	|	2 Mins 40 Secs
+20	|	5	|	8	|	10	|	1 Min 40 Secs
+21	|	9	|	1	|	19	|	3 Mins 10 Secs
+22	|	7	|	3	|	7	|	1 Min 10 Secs
+23	|	6	|	3	|	12	|	2 Mins 0 Secs
+24	|	1	|	8	|	7	|	1 Min 10 Secs
+25	|	2	|	7	|	6	|	1 Min 0 Secs
+26	|	3	|	6	|	5	|	0 Mins 50 Secs
+27	|	8	|	1	|	14	|	2 Mins 20 Secs
+28	|	7	|	1	|	8	|	1 Min 20 Secs
+29	|	1	|	5	|	12	|	2 Mins 0 Secs
+30	|	5	|	0	|	5	|	0 Mins 50 Secs
+31	|	0	|	8	|	8	|	1 Min 20 Secs
+32	|	5	|	7	|	7	|	1 Min 10 Secs
+33	|	0	|	4	|	4	|	0 Mins 40 Secs
+34	|	6	|	1	|	7	|	1 Min 10 Secs
+35	|	3	|	0	|	8	|	1 Min 20 Secs
+36	|	8	|	0	|	8	|	1 Min 20 Secs
+37	|	8	|	9	|	17	|	2 Mins 50 Secs
+38	|	9	|	0	|	9	|	1 Min 30 Secs
+39	|	0	|	3	|	12	|	2 Mins 0 Secs
+40	|	9	|	0	|	9	|	1 Min 30 Secs
+41	|	5	|	9	|	6	|	1 Min 0 Secs
+42	|	8	|	2	|	13	|	2 Mins 10 Secs
+43	|	0	|	6	|	21	|	3 Mins 30 Secs
+44	|	2	|	8	|	10	|	1 Min 40 Secs
+45	|	8	|	5	|	3	|	0 Mins 30 Secs
+46	|	9	|	0	|	16	|	2 Mins 40 Secs
+47	|	2	|	8	|	21	|	3 Mins 30 Secs
+48	|	4	|	2	|	11	|	1 Min 50 Secs
+49	|	2	|	0	|	13	|	2 Mins 10 Secs
+50	|	9	|	5	|	5	|	0 Mins 50 Secs
+51	|	2	|	3	|	9	|	1 Min 30 Secs
+52	|	5	|	7	|	8	|	1 Min 20 Secs
+53	|	1	|	0	|	15	|	2 Mins 30 Secs
+54	|	6	|	0	|	7	|	1 Min 10 Secs
+55	|	9	|	0	|	25	|	4 Mins 10 Secs
+56	|	4	|	3	|	4	|	0 Mins 40 Secs
+57	|	0	|	1	|	1	|	0 Mins 10 Secs
+58	|	9	|	7	|	11	|	1 Min 50 Secs
+59	|	9	|	4	|	14	|	2 Mins 20 Secs
+60	|	0	|	3	|	3	|	0 Mins 30 Secs
+61	|	6	|	1	|	11	|	1 Min 50 Secs
+62	|	5	|	3	|	9	|	1 Min 30 Secs
+63	|	8	|	9	|	16	|	2 Mins 40 Secs
+64	|	7	|	8	|	15	|	2 Mins 30 Secs
+65	|	7	|	5	|	12	|	2 Mins 0 Secs
+66	|	8	|	0	|	17	|	2 Mins 50 Secs
+67	|	1	|	6	|	5	|	0 Mins 50 Secs
+68	|	9	|	7	|	11	|	1 Min 50 Secs
+69	|	8	|	6	|	12	|	2 Mins 0 Secs
+70	|	9	|	5	|	7	|	1 Min 10 Secs
+71	|	2	|	8	|	16	|	2 Mins 40 Secs
+72	|	3	|	2	|	3	|	0 Mins 30 Secs
+73	|	8	|	9	|	1	|	0 Mins 10 Secs
+74	|	4	|	2	|	8	|	1 Min 20 Secs
+75	|	7	|	8	|	13	|	2 Mins 10 Secs
+76	|	3	|	4	|	9	|	1 Min 30 Secs
+77	|	5	|	4	|	5	|	0 Mins 50 Secs
+78	|	7	|	5	|	3	|	0 Mins 30 Secs
+79	|	6	|	8	|	6	|	1 Min 0 Secs
+80	|	9	|	6	|	10	|	1 Min 40 Secs
+81	|	3	|	6	|	16	|	2 Mins 40 Secs
+82	|	7	|	5	|	5	|	0 Mins 50 Secs
+83	|	0	|	9	|	25	|	4 Mins 10 Secs
+84	|	5	|	4	|	6	|	1 Min 0 Secs
+85	|	9	|	6	|	22	|	3 Mins 40 Secs
+86	|	1	|	6	|	16	|	2 Mins 40 Secs
+87	|	6	|	1	|	5	|	0 Mins 50 Secs
+88	|	4	|	9	|	15	|	2 Mins 30 Secs
+89	|	7	|	8	|	14	|	2 Mins 20 Secs
+90	|	7	|	5	|	19	|	3 Mins 10 Secs
+91	|	3	|	1	|	4	|	0 Mins 40 Secs
+92	|	3	|	6	|	5	|	0 Mins 50 Secs
+93	|	9	|	0	|	17	|	2 Mins 50 Secs
+94	|	2	|	1	|	11	|	1 Min 50 Secs
+95	|	7	|	1	|	11	|	1 Min 50 Secs
+96	|	5	|	6	|	18	|	3 Mins 0 Secs
+97	|	9	|	6	|	6	|	1 Min 0 Secs
+
+Average Time: 1 Min 40 Secs
+RoundTime: 61 Mins 0 Secs
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	     Round: 5 There were 9 requests
+
+Request		Start		Goal		Time		Approx.
+____________________________________________________________________________________________________
+
+1	|	1	|	7	|	7	|	1 Min 10 Secs
+2	|	8	|	3	|	13	|	2 Mins 10 Secs
+3	|	8	|	7	|	9	|	1 Min 30 Secs
+4	|	1	|	3	|	3	|	0 Mins 30 Secs
+5	|	4	|	5	|	5	|	0 Mins 50 Secs
+6	|	5	|	4	|	5	|	0 Mins 50 Secs
+7	|	6	|	9	|	12	|	2 Mins 0 Secs
+8	|	1	|	7	|	14	|	2 Mins 20 Secs
+9	|	4	|	3	|	6	|	1 Min 0 Secs
+
+Average Time: 1 Min 20 Secs
+RoundTime: 5 Mins 0 Secs
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	     Round: 6 There were 78 requests
+
+Request		Start		Goal		Time		Approx.
+____________________________________________________________________________________________________
+
+1	|	5	|	2	|	14	|	2 Mins 20 Secs
+2	|	7	|	2	|	14	|	2 Mins 20 Secs
+3	|	3	|	6	|	6	|	1 Min 0 Secs
+4	|	0	|	4	|	4	|	0 Mins 40 Secs
+5	|	5	|	6	|	6	|	1 Min 0 Secs
+6	|	0	|	8	|	8	|	1 Min 20 Secs
+7	|	6	|	1	|	11	|	1 Min 50 Secs
+8	|	4	|	0	|	12	|	2 Mins 0 Secs
+9	|	2	|	7	|	5	|	0 Mins 50 Secs
+10	|	3	|	0	|	12	|	2 Mins 0 Secs
+11	|	7	|	9	|	9	|	1 Min 30 Secs
+12	|	3	|	8	|	8	|	1 Min 20 Secs
+13	|	8	|	5	|	13	|	2 Mins 10 Secs
+14	|	7	|	4	|	14	|	2 Mins 20 Secs
+15	|	1	|	7	|	9	|	1 Min 30 Secs
+16	|	3	|	9	|	11	|	1 Min 50 Secs
+17	|	6	|	7	|	9	|	1 Min 30 Secs
+18	|	2	|	1	|	8	|	1 Min 20 Secs
+19	|	1	|	7	|	16	|	2 Mins 40 Secs
+20	|	1	|	3	|	12	|	2 Mins 0 Secs
+21	|	5	|	0	|	9	|	1 Min 30 Secs
+22	|	9	|	5	|	6	|	1 Min 0 Secs
+23	|	4	|	2	|	9	|	1 Min 30 Secs
+24	|	9	|	8	|	23	|	3 Mins 50 Secs
+25	|	2	|	7	|	8	|	1 Min 20 Secs
+26	|	9	|	5	|	26	|	4 Mins 20 Secs
+27	|	6	|	1	|	14	|	2 Mins 20 Secs
+28	|	9	|	4	|	13	|	2 Mins 10 Secs
+29	|	8	|	6	|	6	|	1 Min 0 Secs
+30	|	2	|	6	|	14	|	2 Mins 20 Secs
+31	|	1	|	5	|	19	|	3 Mins 10 Secs
+32	|	5	|	3	|	3	|	0 Mins 30 Secs
+33	|	7	|	9	|	15	|	2 Mins 30 Secs
+34	|	4	|	3	|	3	|	0 Mins 30 Secs
+35	|	1	|	0	|	6	|	1 Min 0 Secs
+36	|	9	|	6	|	7	|	1 Min 10 Secs
+37	|	7	|	5	|	8	|	1 Min 20 Secs
+38	|	4	|	0	|	5	|	0 Mins 50 Secs
+39	|	1	|	5	|	10	|	1 Min 40 Secs
+40	|	4	|	7	|	12	|	2 Mins 0 Secs
+41	|	8	|	7	|	14	|	2 Mins 20 Secs
+42	|	1	|	8	|	15	|	2 Mins 30 Secs
+43	|	0	|	5	|	26	|	4 Mins 20 Secs
+44	|	9	|	1	|	38	|	6 Mins 20 Secs
+45	|	9	|	7	|	32	|	5 Mins 20 Secs
+46	|	9	|	0	|	26	|	4 Mins 20 Secs
+47	|	3	|	2	|	6	|	1 Min 0 Secs
+48	|	4	|	0	|	13	|	2 Mins 10 Secs
+49	|	4	|	9	|	22	|	3 Mins 40 Secs
+50	|	3	|	0	|	13	|	2 Mins 10 Secs
+51	|	6	|	5	|	8	|	1 Min 20 Secs
+52	|	7	|	6	|	3	|	0 Mins 30 Secs
+53	|	5	|	9	|	5	|	0 Mins 50 Secs
+54	|	3	|	1	|	13	|	2 Mins 10 Secs
+55	|	2	|	6	|	13	|	2 Mins 10 Secs
+56	|	0	|	2	|	8	|	1 Min 20 Secs
+57	|	1	|	9	|	15	|	2 Mins 30 Secs
+58	|	0	|	5	|	11	|	1 Min 50 Secs
+59	|	4	|	0	|	9	|	1 Min 30 Secs
+60	|	0	|	9	|	18	|	3 Mins 0 Secs
+61	|	5	|	6	|	5	|	0 Mins 50 Secs
+62	|	4	|	9	|	12	|	2 Mins 0 Secs
+63	|	8	|	3	|	13	|	2 Mins 10 Secs
+64	|	1	|	9	|	10	|	1 Min 40 Secs
+65	|	1	|	6	|	13	|	2 Mins 10 Secs
+66	|	2	|	4	|	11	|	1 Min 50 Secs
+67	|	1	|	4	|	8	|	1 Min 20 Secs
+68	|	7	|	0	|	18	|	3 Mins 0 Secs
+69	|	1	|	3	|	7	|	1 Min 10 Secs
+70	|	0	|	9	|	27	|	4 Mins 30 Secs
+71	|	9	|	4	|	24	|	4 Mins 0 Secs
+72	|	2	|	7	|	17	|	2 Mins 50 Secs
+73	|	6	|	0	|	10	|	1 Min 40 Secs
+74	|	5	|	0	|	10	|	1 Min 40 Secs
+75	|	6	|	2	|	6	|	1 Min 0 Secs
+76	|	4	|	0	|	8	|	1 Min 20 Secs
+77	|	7	|	4	|	12	|	2 Mins 0 Secs
+78	|	3	|	8	|	8	|	1 Min 20 Secs
+
+Average Time: 2 Mins 0 Secs
+RoundTime: 57 Mins 0 Secs
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	     Round: 7 There were 37 requests
+
+Request		Start		Goal		Time		Approx.
+____________________________________________________________________________________________________
+
+1	|	3	|	0	|	18	|	3 Mins 0 Secs
+2	|	0	|	9	|	9	|	1 Min 30 Secs
+3	|	8	|	0	|	18	|	3 Mins 0 Secs
+4	|	8	|	5	|	13	|	2 Mins 10 Secs
+5	|	5	|	6	|	6	|	1 Min 0 Secs
+6	|	0	|	8	|	8	|	1 Min 20 Secs
+7	|	7	|	2	|	12	|	2 Mins 0 Secs
+8	|	0	|	5	|	5	|	0 Mins 50 Secs
+9	|	5	|	3	|	5	|	0 Mins 50 Secs
+10	|	7	|	6	|	12	|	2 Mins 0 Secs
+11	|	6	|	8	|	10	|	1 Min 40 Secs
+12	|	2	|	8	|	19	|	3 Mins 10 Secs
+13	|	7	|	5	|	8	|	1 Min 20 Secs
+14	|	1	|	5	|	16	|	2 Mins 40 Secs
+15	|	0	|	3	|	30	|	5 Mins 0 Secs
+16	|	5	|	1	|	4	|	0 Mins 40 Secs
+17	|	1	|	7	|	10	|	1 Min 40 Secs
+18	|	1	|	8	|	11	|	1 Min 50 Secs
+19	|	3	|	7	|	15	|	2 Mins 30 Secs
+20	|	0	|	9	|	17	|	2 Mins 50 Secs
+21	|	7	|	5	|	3	|	0 Mins 30 Secs
+22	|	4	|	2	|	7	|	1 Min 10 Secs
+23	|	9	|	5	|	4	|	0 Mins 40 Secs
+24	|	2	|	9	|	7	|	1 Min 10 Secs
+25	|	8	|	7	|	9	|	1 Min 30 Secs
+26	|	5	|	3	|	4	|	0 Mins 40 Secs
+27	|	7	|	8	|	5	|	0 Mins 50 Secs
+28	|	6	|	8	|	5	|	0 Mins 50 Secs
+29	|	0	|	4	|	12	|	2 Mins 0 Secs
+30	|	5	|	9	|	17	|	2 Mins 50 Secs
+31	|	1	|	3	|	11	|	1 Min 50 Secs
+32	|	5	|	8	|	7	|	1 Min 10 Secs
+33	|	0	|	1	|	9	|	1 Min 30 Secs
+34	|	8	|	2	|	6	|	1 Min 0 Secs
+35	|	1	|	7	|	6	|	1 Min 0 Secs
+36	|	2	|	5	|	4	|	0 Mins 40 Secs
+37	|	2	|	0	|	13	|	2 Mins 10 Secs
+
+Average Time: 1 Min 40 Secs
+RoundTime: 23 Mins 10 Secs
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	     Round: 8 There were 18 requests
+
+Request		Start		Goal		Time		Approx.
+____________________________________________________________________________________________________
+
+1	|	5	|	8	|	8	|	1 Min 20 Secs
+2	|	5	|	9	|	9	|	1 Min 30 Secs
+3	|	2	|	5	|	5	|	0 Mins 50 Secs
+4	|	4	|	1	|	17	|	2 Mins 50 Secs
+5	|	7	|	4	|	14	|	2 Mins 20 Secs
+6	|	1	|	5	|	5	|	0 Mins 50 Secs
+7	|	1	|	0	|	1	|	0 Mins 10 Secs
+8	|	4	|	6	|	7	|	1 Min 10 Secs
+9	|	2	|	4	|	5	|	0 Mins 50 Secs
+10	|	7	|	1	|	17	|	2 Mins 50 Secs
+11	|	5	|	9	|	9	|	1 Min 30 Secs
+12	|	4	|	3	|	15	|	2 Mins 30 Secs
+13	|	1	|	7	|	7	|	1 Min 10 Secs
+14	|	4	|	9	|	8	|	1 Min 20 Secs
+15	|	2	|	4	|	13	|	2 Mins 10 Secs
+16	|	5	|	2	|	7	|	1 Min 10 Secs
+17	|	3	|	2	|	7	|	1 Min 10 Secs
+18	|	6	|	0	|	9	|	1 Min 30 Secs
+
+Average Time: 1 Min 30 Secs
+RoundTime: 9 Mins 20 Secs
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	     Round: 9 There were 88 requests
+
+Request		Start		Goal		Time		Approx.
+____________________________________________________________________________________________________
+
+1	|	4	|	7	|	7	|	1 Min 10 Secs
+2	|	3	|	7	|	7	|	1 Min 10 Secs
+3	|	9	|	4	|	14	|	2 Mins 20 Secs
+4	|	8	|	4	|	7	|	1 Min 10 Secs
+5	|	3	|	7	|	22	|	3 Mins 40 Secs
+6	|	5	|	7	|	10	|	1 Min 40 Secs
+7	|	4	|	1	|	6	|	1 Min 0 Secs
+8	|	6	|	3	|	4	|	0 Mins 40 Secs
+9	|	4	|	3	|	4	|	0 Mins 40 Secs
+10	|	2	|	5	|	8	|	1 Min 20 Secs
+11	|	4	|	0	|	5	|	0 Mins 50 Secs
+12	|	5	|	8	|	13	|	2 Mins 10 Secs
+13	|	7	|	9	|	14	|	2 Mins 20 Secs
+14	|	6	|	5	|	4	|	0 Mins 40 Secs
+15	|	8	|	2	|	7	|	1 Min 10 Secs
+16	|	1	|	8	|	23	|	3 Mins 50 Secs
+17	|	2	|	5	|	10	|	1 Min 40 Secs
+18	|	2	|	6	|	11	|	1 Min 50 Secs
+19	|	1	|	0	|	5	|	0 Mins 50 Secs
+20	|	8	|	6	|	2	|	0 Mins 20 Secs
+21	|	7	|	3	|	5	|	0 Mins 50 Secs
+22	|	2	|	0	|	8	|	1 Min 20 Secs
+23	|	7	|	8	|	11	|	1 Min 50 Secs
+24	|	9	|	1	|	20	|	3 Mins 20 Secs
+25	|	8	|	1	|	17	|	2 Mins 50 Secs
+26	|	3	|	9	|	9	|	1 Min 30 Secs
+27	|	7	|	9	|	9	|	1 Min 30 Secs
+28	|	4	|	5	|	4	|	0 Mins 40 Secs
+29	|	8	|	7	|	8	|	1 Min 20 Secs
+30	|	8	|	5	|	10	|	1 Min 40 Secs
+31	|	1	|	9	|	18	|	3 Mins 0 Secs
+32	|	4	|	5	|	8	|	1 Min 20 Secs
+33	|	5	|	6	|	9	|	1 Min 30 Secs
+34	|	6	|	3	|	6	|	1 Min 0 Secs
+35	|	1	|	7	|	14	|	2 Mins 20 Secs
+36	|	0	|	1	|	22	|	3 Mins 40 Secs
+37	|	8	|	1	|	30	|	5 Mins 0 Secs
+38	|	8	|	7	|	24	|	4 Mins 0 Secs
+39	|	2	|	7	|	8	|	1 Min 20 Secs
+40	|	7	|	6	|	1	|	0 Mins 10 Secs
+41	|	1	|	0	|	15	|	2 Mins 30 Secs
+42	|	8	|	7	|	8	|	1 Min 20 Secs
+43	|	0	|	4	|	19	|	3 Mins 10 Secs
+44	|	1	|	8	|	10	|	1 Min 40 Secs
+45	|	7	|	6	|	12	|	2 Mins 0 Secs
+46	|	6	|	8	|	2	|	0 Mins 20 Secs
+47	|	0	|	5	|	15	|	2 Mins 30 Secs
+48	|	9	|	7	|	6	|	1 Min 0 Secs
+49	|	9	|	8	|	5	|	0 Mins 50 Secs
+50	|	4	|	5	|	4	|	0 Mins 40 Secs
+51	|	2	|	7	|	16	|	2 Mins 40 Secs
+52	|	3	|	6	|	15	|	2 Mins 30 Secs
+53	|	7	|	4	|	19	|	3 Mins 10 Secs
+54	|	2	|	0	|	5	|	0 Mins 50 Secs
+55	|	7	|	3	|	20	|	3 Mins 20 Secs
+56	|	0	|	9	|	14	|	2 Mins 20 Secs
+57	|	4	|	8	|	5	|	0 Mins 50 Secs
+58	|	9	|	0	|	31	|	5 Mins 10 Secs
+59	|	7	|	0	|	13	|	2 Mins 10 Secs
+60	|	8	|	2	|	16	|	2 Mins 40 Secs
+61	|	2	|	0	|	18	|	3 Mins 0 Secs
+62	|	3	|	5	|	5	|	0 Mins 50 Secs
+63	|	3	|	0	|	18	|	3 Mins 0 Secs
+64	|	7	|	8	|	8	|	1 Min 20 Secs
+65	|	2	|	1	|	15	|	2 Mins 30 Secs
+66	|	6	|	8	|	8	|	1 Min 20 Secs
+67	|	7	|	3	|	12	|	2 Mins 0 Secs
+68	|	1	|	8	|	7	|	1 Min 10 Secs
+69	|	0	|	6	|	9	|	1 Min 30 Secs
+70	|	4	|	0	|	15	|	2 Mins 30 Secs
+71	|	4	|	3	|	11	|	1 Min 50 Secs
+72	|	0	|	7	|	7	|	1 Min 10 Secs
+73	|	1	|	6	|	7	|	1 Min 10 Secs
+74	|	1	|	7	|	8	|	1 Min 20 Secs
+75	|	7	|	3	|	4	|	0 Mins 40 Secs
+76	|	4	|	6	|	13	|	2 Mins 10 Secs
+77	|	5	|	0	|	7	|	1 Min 10 Secs
+78	|	5	|	9	|	5	|	0 Mins 50 Secs
+79	|	0	|	3	|	12	|	2 Mins 0 Secs
+80	|	4	|	7	|	16	|	2 Mins 40 Secs
+81	|	3	|	8	|	17	|	2 Mins 50 Secs
+82	|	8	|	4	|	4	|	0 Mins 40 Secs
+83	|	5	|	7	|	7	|	1 Min 10 Secs
+84	|	2	|	5	|	19	|	3 Mins 10 Secs
+85	|	8	|	9	|	16	|	2 Mins 40 Secs
+86	|	5	|	1	|	6	|	1 Min 0 Secs
+87	|	1	|	0	|	7	|	1 Min 10 Secs
+88	|	1	|	5	|	12	|	2 Mins 0 Secs
+
+Average Time: 1 Min 40 Secs
+RoundTime: 61 Mins 0 Secs
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+	     Round: 10 There were 96 requests
+
+Request		Start		Goal		Time		Approx.
+____________________________________________________________________________________________________
+
+1	|	8	|	3	|	13	|	2 Mins 10 Secs
+2	|	5	|	8	|	8	|	1 Min 20 Secs
+3	|	0	|	1	|	1	|	0 Mins 10 Secs
+4	|	0	|	7	|	7	|	1 Min 10 Secs
+5	|	6	|	3	|	13	|	2 Mins 10 Secs
+6	|	4	|	9	|	6	|	1 Min 0 Secs
+7	|	3	|	5	|	2	|	0 Mins 20 Secs
+8	|	6	|	0	|	15	|	2 Mins 30 Secs
+9	|	2	|	4	|	19	|	3 Mins 10 Secs
+10	|	4	|	7	|	3	|	0 Mins 30 Secs
+11	|	5	|	6	|	2	|	0 Mins 20 Secs
+12	|	7	|	0	|	10	|	1 Min 40 Secs
+13	|	8	|	2	|	14	|	2 Mins 20 Secs
+14	|	8	|	2	|	14	|	2 Mins 20 Secs
+15	|	5	|	1	|	7	|	1 Min 10 Secs
+16	|	7	|	0	|	20	|	3 Mins 20 Secs
+17	|	7	|	3	|	10	|	1 Min 40 Secs
+18	|	0	|	1	|	1	|	0 Mins 10 Secs
+19	|	6	|	0	|	13	|	2 Mins 10 Secs
+20	|	5	|	7	|	6	|	1 Min 0 Secs
+21	|	6	|	7	|	7	|	1 Min 10 Secs
+22	|	1	|	0	|	16	|	2 Mins 40 Secs
+23	|	7	|	8	|	8	|	1 Min 20 Secs
+24	|	4	|	7	|	7	|	1 Min 10 Secs
+25	|	8	|	1	|	15	|	2 Mins 30 Secs
+26	|	2	|	1	|	3	|	0 Mins 30 Secs
+27	|	5	|	6	|	8	|	1 Min 20 Secs
+28	|	5	|	7	|	6	|	1 Min 0 Secs
+29	|	9	|	2	|	23	|	3 Mins 50 Secs
+30	|	4	|	3	|	10	|	1 Min 40 Secs
+31	|	1	|	4	|	3	|	0 Mins 30 Secs
+32	|	4	|	6	|	5	|	0 Mins 50 Secs
+33	|	4	|	7	|	4	|	0 Mins 40 Secs
+34	|	3	|	2	|	2	|	0 Mins 20 Secs
+35	|	4	|	7	|	7	|	1 Min 10 Secs
+36	|	7	|	9	|	9	|	1 Min 30 Secs
+37	|	1	|	0	|	18	|	3 Mins 0 Secs
+38	|	5	|	3	|	13	|	2 Mins 10 Secs
+39	|	8	|	3	|	13	|	2 Mins 10 Secs
+40	|	5	|	7	|	5	|	0 Mins 50 Secs
+41	|	2	|	9	|	7	|	1 Min 10 Secs
+42	|	0	|	1	|	4	|	0 Mins 40 Secs
+43	|	5	|	1	|	12	|	2 Mins 0 Secs
+44	|	8	|	5	|	24	|	4 Mins 0 Secs
+45	|	3	|	4	|	3	|	0 Mins 30 Secs
+46	|	4	|	0	|	9	|	1 Min 30 Secs
+47	|	4	|	0	|	9	|	1 Min 30 Secs
+48	|	0	|	5	|	14	|	2 Mins 20 Secs
+49	|	7	|	3	|	8	|	1 Min 20 Secs
+50	|	8	|	5	|	8	|	1 Min 20 Secs
+51	|	2	|	3	|	12	|	2 Mins 0 Secs
+52	|	2	|	6	|	15	|	2 Mins 30 Secs
+53	|	8	|	6	|	7	|	1 Min 10 Secs
+54	|	0	|	9	|	22	|	3 Mins 40 Secs
+55	|	1	|	2	|	8	|	1 Min 20 Secs
+56	|	2	|	7	|	13	|	2 Mins 10 Secs
+57	|	2	|	7	|	12	|	2 Mins 0 Secs
+58	|	8	|	3	|	6	|	1 Min 0 Secs
+59	|	8	|	4	|	5	|	0 Mins 50 Secs
+60	|	6	|	0	|	9	|	1 Min 30 Secs
+61	|	5	|	3	|	9	|	1 Min 30 Secs
+62	|	9	|	5	|	19	|	3 Mins 10 Secs
+63	|	2	|	6	|	6	|	1 Min 0 Secs
+64	|	0	|	4	|	19	|	3 Mins 10 Secs
+65	|	7	|	2	|	13	|	2 Mins 10 Secs
+66	|	9	|	6	|	9	|	1 Min 30 Secs
+67	|	0	|	1	|	3	|	0 Mins 30 Secs
+68	|	9	|	5	|	19	|	3 Mins 10 Secs
+69	|	3	|	2	|	8	|	1 Min 20 Secs
+70	|	7	|	8	|	6	|	1 Min 0 Secs
+71	|	1	|	9	|	23	|	3 Mins 50 Secs
+72	|	9	|	8	|	13	|	2 Mins 10 Secs
+73	|	0	|	6	|	27	|	4 Mins 30 Secs
+74	|	5	|	0	|	8	|	1 Min 20 Secs
+75	|	9	|	3	|	23	|	3 Mins 50 Secs
+76	|	5	|	2	|	10	|	1 Min 40 Secs
+77	|	4	|	2	|	10	|	1 Min 40 Secs
+78	|	5	|	6	|	14	|	2 Mins 20 Secs
+79	|	4	|	8	|	16	|	2 Mins 40 Secs
+80	|	6	|	9	|	3	|	0 Mins 30 Secs
+81	|	4	|	9	|	9	|	1 Min 30 Secs
+82	|	1	|	8	|	26	|	4 Mins 20 Secs
+83	|	4	|	1	|	8	|	1 Min 20 Secs
+84	|	8	|	7	|	2	|	0 Mins 20 Secs
+85	|	6	|	0	|	9	|	1 Min 30 Secs
+86	|	8	|	6	|	2	|	0 Mins 20 Secs
+87	|	7	|	3	|	5	|	0 Mins 50 Secs
+88	|	5	|	1	|	7	|	1 Min 10 Secs
+89	|	9	|	0	|	24	|	4 Mins 0 Secs
+90	|	5	|	3	|	14	|	2 Mins 20 Secs
+91	|	6	|	0	|	17	|	2 Mins 50 Secs
+92	|	8	|	0	|	17	|	2 Mins 50 Secs
+93	|	7	|	4	|	13	|	2 Mins 10 Secs
+94	|	9	|	2	|	16	|	2 Mins 40 Secs
+95	|	8	|	0	|	18	|	3 Mins 0 Secs
+96	|	0	|	7	|	7	|	1 Min 10 Secs
+
+Average Time: 1 Min 40 Secs
+RoundTime: 62 Mins 10 Secs
+
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-

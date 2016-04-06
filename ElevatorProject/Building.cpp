@@ -207,7 +207,6 @@ void building::simulate() {
 		myfile << "Average Time: "; timeCoversion(averageTime, myfile);
 		myfile << endl;
 		//timeCoversion(roundTime, myfile);
-		cout << roundTime << endl;
 		int temp = roundTime;
 		temp = temp * 10;
 		int minutes = temp / 60;
