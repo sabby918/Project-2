@@ -23,11 +23,13 @@ void main() {
 		}
 		case 2:
 			if (true) {
+				building Building;
 				int floorNumber;
 				int typeOfTraffic;
 				int NumberElevators;
 				cout << "specify the Number of floors" << endl << ">>";
 				cin >> floorNumber;
+
 				cout << "specify the type of traffic?" << endl << "1. low " << endl << "2. medium" << endl << "3. high" << endl << ">>";
 				cin >> typeOfTraffic;
 				cout << "specify the number of elevators?" << endl << ">>";
