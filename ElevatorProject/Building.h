@@ -48,4 +48,5 @@ public:
 	void moveCalls();
 	int moveElevators();
 	void simulate();
+	int createCalls(int requests, int percentage, int possiblePeople);
 };

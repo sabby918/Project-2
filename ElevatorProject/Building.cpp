@@ -10,7 +10,14 @@
 ////////////
 ////////////
 //////////////
+void timeCoversion(int time) {
 
+	time *= 30;
+	int minutes = time / 60;
+	int seconds = time % 60;
+	cout << minutes << " Minutes " 
+		<< seconds << " Seconds";
+}
 void building::setElevator(int number) {
 	for (int i = 0; i < number; i++) {
 		Elevator elevator;
@@ -88,10 +95,12 @@ int building::moveElevators() {
 		}
 		dest++;
 	}
-	list<call>::iterator Oitr;
-	for (Oitr = floorCall.begin(); Oitr != floorCall.end(); Oitr++) {
-		if (Oitr->arrived == false)
-			Oitr->waitingTime++;
+	if (!elevators[0].destinations.empty()) {
+		list<call>::iterator Oitr;
+		for (Oitr = floorCall.begin(); Oitr != floorCall.end(); Oitr++) {
+			if (Oitr->arrived == false)
+				Oitr->waitingTime++;
+		}
 	}
 	elevators[0].move();
 	return num;
@@ -141,7 +150,7 @@ void building::simulate() {
 	int count = 0;
 	srand(time(NULL));
 
-	while (index < 10) {
+	while (index < 24) {
 		elevators[0].restart(0);
 		int requests = 0;
 		int complete = 0;
@@ -187,15 +196,8 @@ void building::simulate() {
 		requests++;
 		*/
 		int possiblePeople = rand() % 50;
-
-		for (int z = 0; z < possiblePeople; z++) {
-
-			bool TrueFalse = ((rand() % 100) < 50);
-			if (TrueFalse) {
-				generate();
-				requests++;
-			}
-		}
+		int percentage = 50;
+		requests = createCalls(requests, 75, 100);
 		setLocation(location);
 		while (requests > complete) {
 			moveCalls();
@@ -210,7 +212,8 @@ void building::simulate() {
 		list<call>::iterator itr;
 		int i = 1;
 		for (itr = floorCall.begin(); itr != floorCall.end(); itr++) {
-			cout << "The waiting time for floorcall [" << i << "] was " << itr->waitingTime << endl;
+			cout << "The waiting time for floorcall [" << i << "] was "; timeCoversion(itr->waitingTime);
+				cout << endl;
 			i++;
 		}
 
@@ -345,3 +348,16 @@ void building::generate() {
 		return;
 	}
 }
+int building::createCalls(int requests, int percentage, int possiblePeople) {
+
+	for (int z = 0; z < possiblePeople; z++) {
+
+		bool TrueFalse = ((rand() % 100) < percentage);
+		if (TrueFalse) {
+			generate();
+			requests++;
+		}
+	}
+	return requests;
+}
+
